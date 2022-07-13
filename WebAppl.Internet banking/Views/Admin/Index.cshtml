@@ -1,0 +1,46 @@
+﻿@using Internet_banking.Core.Application.ViewModels.Users;
+@model  List<UserVM>;
+ 
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="card">
+    <div class="card-header">
+    Administrar usuarios
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-end gap-3">
+            <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo cliente</a>
+            <a asp-controller="Admin" asp-action="CreateAdmin" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo administrador</a>
+        </div>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre de usuario</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.Username</td>
+                    <td>@item.Email</td>
+                    <td>@(item.Roles.Count>1?"SuperUsuario":$"{item.Roles[0]}")</td>
+                    <td>@(item.IsVerified == true ? "Activa" : "Inactiva")</td>
+                    <td>
+                        <a asp-action="Editar" asp-controller="Mantenedor" class=" btn btn-primary btn-sm" asp-route-Id=@item.Id><i class="bi bi-pencil-square"></i> Editar</a>
+                    </td>
+                    <td>
+                        <a asp-action="Eliminar" asp-controller="Mantenedor" class=" btn btn-danger btn-sm" asp-route-Id=@item.Id><i class="bi bi-trash3-fill"></i> Eliminar</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>        
+    </div>
+</div>
