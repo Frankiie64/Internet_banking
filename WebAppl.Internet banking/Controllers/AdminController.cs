@@ -65,7 +65,7 @@ namespace WebAppl.Internet_banking.Controllers
             SingletonRepository.Instance.client = vm;
             SingletonRepository.Instance.origin = origin;
 
-            return RedirectToRoute(new { controller = "Admin", action = "CreateClientWithProduct", id = string.Empty, value = false });
+            return RedirectToRoute(new { controller = "Product", action = "CreateClientWithProduct", id = string.Empty, value = false });
         }
 
        

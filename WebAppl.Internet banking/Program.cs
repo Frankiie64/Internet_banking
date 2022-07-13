@@ -16,8 +16,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using Internet_banking.Core.Application.helper;
-
 namespace WebAppl.Internet_banking
 {
     public class Program
@@ -34,6 +32,7 @@ namespace WebAppl.Internet_banking
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
                     var productRepository = services.GetRequiredService<ITypeAccountRepository>();
 
+                    
                     await DefaultRoles.SeedAsync(userManager, roleManager);
                     await DefaultBasicUser.SeedAsync(userManager, roleManager);
                     await DefaultAdminUser.SeedAsync(userManager,roleManager);
