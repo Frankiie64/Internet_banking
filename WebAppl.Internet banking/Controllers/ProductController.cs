@@ -27,9 +27,9 @@ namespace WebAppl.Internet_banking.Controllers
             this.servicesTypeAccount = servicesTypeAccount;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await servicesUser.GetAllClientsAsync());
         }
         public async Task<IActionResult> CreateClientWithProduct(string id, bool value = true)
         {

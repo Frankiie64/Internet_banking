@@ -1,13 +1,13 @@
 ﻿@using Internet_banking.Core.Application.ViewModels.Users;
-@model  List<UserVM>;
- 
+@model List<UserVM>;
+
 @{
     ViewData["Title"] = "Usuarios";
 }
 
 <div class="card">
     <div class="card-header">
-    Administrar usuarios
+        Administrar usuarios
     </div>
     <div class="card-body">
         <div class="d-flex justify-content-end gap-3">
@@ -22,6 +22,7 @@
                     <th>Email</th>
                     <th>Rol</th>
                     <th>Estado</th>
+                    <td class="fw-bolder" style="">Acciones</td>
                 </tr>
             </thead>
             <tbody>
@@ -32,15 +33,32 @@
                     <td>@item.Email</td>
                     <td>@(item.Roles.Count>1?"SuperUsuario":$"{item.Roles[0]}")</td>
                     <td>@(item.IsVerified == true ? "Activa" : "Inactiva")</td>
-                    <td>
-                        <a asp-action="Editar" asp-controller="Mantenedor" class=" btn btn-primary btn-sm" asp-route-Id=@item.Id><i class="bi bi-pencil-square"></i> Editar</a>
-                    </td>
-                    <td>
-                        <a asp-action="Eliminar" asp-controller="Mantenedor" class=" btn btn-danger btn-sm" asp-route-Id=@item.Id><i class="bi bi-trash3-fill"></i> Eliminar</a>
-                    </td>
+                    <td class="justify-content-end">
+                        <a asp-controller="Admin" asp-action="Edit" class=" btn btn-primary btn-sm" asp-route-Id=@item.Id><i class="bi bi-pencil-square"></i> Editar</a>
+                        <button class=" btn btn-success btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            @(item.IsVerified == true?"Inactivar":"Activar")
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Confirmacion</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-body">Estas seguro que desea @(item.IsVerified == true?"Inactivar":"Activar") esta cuenta ? </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <a asp-controller="Admin" asp-action="IsVerified" asp-route-Id=@item.Id type="button" class="btn btn-primary">Aceptar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </tr>
                 }
             </tbody>
-        </table>        
+        </table>
     </div>
 </div>
+

@@ -8187,11 +8187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
+      "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
       "projectName": "WebAppl.Internet banking",
-      "projectPath": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
+      "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
       "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\WebAppl.Internet banking\\obj\\",
+      "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\WebAppl.Internet banking\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8208,17 +8208,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
-              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
+            "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
+              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
             },
-            "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj": {
-              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj"
+            "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj": {
+              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj"
             },
-            "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj"
+            "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj"
             },
-            "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
-              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj"
+            "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
+              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj"
             }
           }
         }

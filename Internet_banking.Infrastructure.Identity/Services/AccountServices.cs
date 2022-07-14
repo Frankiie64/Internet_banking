@@ -110,16 +110,7 @@ namespace Internet_banking.Infrastructure.Identity.Services
             if (result.Succeeded)
             {
                 await userManager.AddToRoleAsync(user, request.Rol);
-                var url = await SendVerificationEmailUrl(user, origin);
-
-                await emailService.SendAsync(new EmailRequest()
-                {
-                    To = user.Email,
-                    Body = $"Por favor confirma tu cuenta, mediante la visita de este link. \n \n {url}",
-                    Subject = "Confirmar nuevo usuario"
-                }); 
-
-                
+                var url = await SendVerificationEmailUrl(user, origin);                              
             }
             else
             {
@@ -251,6 +242,9 @@ namespace Internet_banking.Infrastructure.Identity.Services
                 AuthenticationResponse item = new AuthenticationResponse
                 {
                     Id = vm.Id,
+                    Firstname=vm.Firstname,
+                    Lastname=vm.Lastname,
+                    DocumementId=vm.DocumementId,
                     Username = vm.UserName,
                     Email = vm.Email,
                     Roles = rol.ToList(),
@@ -286,5 +280,26 @@ namespace Internet_banking.Infrastructure.Identity.Services
             return item;
         }
 
+        public async Task<AuthenticationResponse> IsVerified(string id)
+        {
+            var vm = await userManager.FindByIdAsync(id);
+
+            var rol = await userManager.GetRolesAsync(vm).ConfigureAwait(false);
+
+            vm.EmailConfirmed = vm.EmailConfirmed == true ? false : true;
+
+            await userManager.UpdateAsync(vm);
+
+            AuthenticationResponse item = new AuthenticationResponse
+            {
+                Id = vm.Id,
+                Username = vm.UserName,
+                Email = vm.Email,
+                Roles = rol.ToList(),
+                IsVerified = vm.EmailConfirmed
+            };
+
+            return item;
+        }
     }
 }

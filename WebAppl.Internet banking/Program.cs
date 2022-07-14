@@ -37,8 +37,12 @@ namespace WebAppl.Internet_banking
                     await DefaultBasicUser.SeedAsync(userManager, roleManager);
                     await DefaultAdminUser.SeedAsync(userManager,roleManager);
                     await DefaultSuperAdminUser.SeedAsync(userManager, roleManager);
-                    await DefaultSavingAccount.SeedAsync(productRepository);
 
+                    // Default accounts created behind the program star cause is necesary there are created before their functionality
+                    await DefaultPrincipalAccount.SeedAsync(productRepository);
+                    await DefaultSavingAccount.SeedAsync(productRepository);
+                    await DefaultCreditCard.SeedAsync(productRepository);
+                    await DefaultDebt.SeedAsync(productRepository);
                 }
                 catch (Exception ex)
                 {

@@ -15,3 +15,20 @@ C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_
 C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.dll
 C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\ref\Internet_banking.Infrastructure.Persistence.dll
 C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Infrastructure.Persistence.deps.json
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Infrastructure.Persistence.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\ref\Internet_banking.Infrastructure.Persistence.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Infrastructure.Persistence.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Domain.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Application.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Domain.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.csproj.AssemblyReference.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.AssemblyInfoInputs.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.AssemblyInfo.cs
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.csproj.CopyComplete
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\ref\Internet_banking.Infrastructure.Persistence.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.pdb

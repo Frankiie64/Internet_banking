@@ -59,7 +59,18 @@ namespace Internet_banking.Core.Application.Services
         public async Task<UserVM> GetUserByIdAsync(string id)
         {
             return mapper.Map<UserVM>(await accountServices.GetUserByIdAsync(id));
-        }
+        }        
+        public async Task<List<UserVM>> GetAllClientsAsync()
+        {
+            List<UserVM> items = mapper.Map<List<UserVM>>(await accountServices.GetAllUsersAsync());
 
+            items = items.Where(clients => clients.Roles[0] == "Cliente" && clients.IsVerified == true).ToList();
+
+            return items;
+        }
+        public Task<AuthenticationResponse> IsVerified(string id)
+        {
+            return accountServices.IsVerified(id);
+        }
     }
 }

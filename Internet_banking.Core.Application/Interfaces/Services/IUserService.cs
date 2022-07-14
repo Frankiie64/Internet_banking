@@ -13,7 +13,9 @@ namespace Internet_banking.Core.Application.Interfaces.Services
         Task<RegisterResponse> RegisterAsync(SaveUserVM vm,string origin);
         Task<ResetPasswordResponse> ResetPasswordAsync(ResetPasswordVM vm);
         Task<List<UserVM>> GetAllUsersAsync();
+        Task<List<UserVM>> GetAllClientsAsync();
         Task<UserVM> GetUserByIdAsync(string id);
+        Task<AuthenticationResponse> IsVerified(string id);
         Task SignOutAsync();
     }
 }

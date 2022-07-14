@@ -1,4 +1,5 @@
-﻿using Internet_banking.Core.Application.Interfaces.Repositories;
+﻿using Internet_banking.Core.Application.Enums;
+using Internet_banking.Core.Application.Interfaces.Repositories;
 using Internet_banking.Core.Domain.Entities;
 using System;
 using System.Collections.Generic;

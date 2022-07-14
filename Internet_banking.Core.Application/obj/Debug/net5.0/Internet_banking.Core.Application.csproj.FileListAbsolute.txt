@@ -13,3 +13,18 @@ C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_
 C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.dll
 C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_banking.Core.Application\obj\Debug\net5.0\ref\Internet_banking.Core.Application.dll
 C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Internet_banking\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Application.deps.json
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\bin\Debug\net5.0\ref\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Application.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Domain.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Domain.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.csproj.AssemblyReference.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.AssemblyInfoInputs.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.AssemblyInfo.cs
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.csproj.CoreCompileInputs.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.csproj.CopyComplete
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\ref\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.pdb

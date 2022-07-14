@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace WebAppl.Internet_banking.Controllers
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly IUserService userService;
@@ -23,7 +23,7 @@ namespace WebAppl.Internet_banking.Controllers
         {
             return View(await userService.GetAllUsersAsync());
         }
-     
+
         public IActionResult CreateAdmin()
         {
             return View(new SaveUserVM());
@@ -68,6 +68,13 @@ namespace WebAppl.Internet_banking.Controllers
             return RedirectToRoute(new { controller = "Product", action = "CreateClientWithProduct", id = string.Empty, value = false });
         }
 
-       
+        public async Task<IActionResult> IsVerified(string id)
+        {
+            await userService.IsVerified(id);
+
+            return RedirectToRoute
+                (new { controller = "Admin", action = "Index" });
+        }
+
     }
 }

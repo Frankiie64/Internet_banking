@@ -1,5 +1,47 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using Internet_banking.Core.Application.ViewModels.Users;
+@model List<UserVM>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <p class="card-title fs-2">Clientes</p>
+        </div>
+        @if (Model.Count == 0 || Model == null)
+        {
+            <div class="card-body">
+                <h5 class="card-title">No se ha encontrado clientes en la base de datos</h5>
+                <h5 class="card-subtitle">Si considera que es un error, favor de llamar al servicio tecnico.</h5>
+            </div>
+        }
+        else
+        {
+            <div class="card-body">
+                <h5 class="card-title">Seleccione el cliente al que desea agregarle un producto</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Cedula</th>
+                            <th>Nombre</th>
+                            <th>Nombre de usuario</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.DocumementId</td>
+                                <td>@item.Firstname @item.Lastname</td>
+                                <td>@item.Username</td>
+                                <td>@item.Email</td>
+                                <td>
+                                    <a asp-action="CreateClientWithProduct" asp-controller="Product" class=" btn btn-primary btn-sm" asp-route-Id=@item.Id><i class="bi bi-pencil-square"></i>Agregar producto</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

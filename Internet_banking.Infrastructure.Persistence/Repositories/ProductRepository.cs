@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Internet_banking.Infrastructure.Persistence.Repositories
 {
-    public class ProductRepository: GenericRepository<Products>, IGenericRepository<Products>
+    public class ProductRepository: GenericRepository<Products>, IProductRepository
     {
         private readonly ApplicationDbContext db;
 

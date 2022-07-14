@@ -14,6 +14,8 @@ namespace Internet_banking.Core.Application.Interfaces.Services
 
         Task<List<AuthenticationResponse>> GetAllUsersAsync();
         Task<AuthenticationResponse> GetUserByIdAsync(string id);
+        Task<AuthenticationResponse> IsVerified(string id);
+
         Task SignOutAsync();
     }
 }

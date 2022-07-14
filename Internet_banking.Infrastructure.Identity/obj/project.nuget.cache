@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3WdXtk4+wyvwgnd1wdP5cX/W+zQ2VStz6ddqZxDhuxGbsUe690Xj/ok+BAEH5iQSRJKLtCNvrDFP8tkJo7r32w==",
+  "dgSpecHash": "25hIGis4UeVOQvBJoMMFjEy4Flt9F8j1EtF4RSDysHLXjdlZR8f6q8Vo3ooc1Rz3Np52VRH4Kng6nd7dSy8dTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Franklyn\\source\\repos\\Proyecto MVC .NET CORE\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj",
+  "projectFilePath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Franklyn\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Franklyn\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
