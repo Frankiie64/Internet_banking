@@ -28,9 +28,9 @@ namespace WebAppl.Internet_banking.Controllers
             return View();
         }
         [Authorize(Roles ="Admin")]
-        public async Task<IActionResult> IndexAdmin()
+        public IActionResult IndexAdmin()
         {
-            return View("IndexAdmin", await userService.GetAllUsersAsync());
+            return View("IndexAdmin");
         }
         [Authorize(Roles ="Basic")]
         public IActionResult IndexClient()

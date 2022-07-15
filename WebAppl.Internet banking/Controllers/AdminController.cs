@@ -48,10 +48,34 @@ namespace WebAppl.Internet_banking.Controllers
             return RedirectToRoute(new { controller = "Admin", action = "Index" });
 
         }
+        public async Task<IActionResult> UpdateAdmin(string id)
+        {
+            var item = await userService.GetSaveUserVMByIdAsync(id);
+            return View("CreateAdmin", item);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateAdmin(SaveUserVM vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("CreateAdmin", vm);
+            }
+
+            RegisterResponse response = await userService.UpdateUserAsync(vm);
+
+            if (response.HasError)
+            {
+                vm.HasError = response.HasError;
+                vm.Error = response.Error;
+                return View("CreateAdmin", vm);
+            }
+            return RedirectToRoute(new { controller = "Admin", action = "Index" });
+        }
         public IActionResult CreateClient()
         {
             return View(new SaveUserVM());
         }
+
         [HttpPost]
         public IActionResult CreateClient(SaveUserVM vm)
         {

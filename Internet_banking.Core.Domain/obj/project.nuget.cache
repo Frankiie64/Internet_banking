@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VVjW46qFXPg2EOMGAdcTWbZFaC+kWlH0Cg6+lhtJf1cPg7nxCiE8c1t9iRzM5y+KVF53l3U8gAJ9ux0Ex+Nn8g==",
+  "dgSpecHash": "LRTaPSrt448O8/yYbU/rvqUCn8hsp3gB/OtU05JCzorc/HPudNODoTfYTGUqdz5yK4bWlbcrQZvBE6VL3QLEkQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

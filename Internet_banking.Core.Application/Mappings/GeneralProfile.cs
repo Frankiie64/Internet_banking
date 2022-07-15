@@ -26,6 +26,13 @@ namespace Internet_banking.Core.Application.Mappings
                 .ForMember(x => x.Error, opt => opt.Ignore())
                 .ReverseMap();
 
+            CreateMap<AuthenticationResponse, SaveUserVM>()
+             .ForMember(x => x.ConfirmPassword, opt => opt.Ignore())
+             .ForMember(x => x.Rol, opt => opt.Ignore())
+             .ReverseMap()
+             .ForMember(x => x.IsVerified, opt => opt.Ignore())
+             .ForMember(x => x.Roles, opt => opt.Ignore());
+
             CreateMap<ForgotPassowordRequest, ForgotPasswordVM>()
                 .ForMember(x => x.HasError, opt => opt.Ignore())
                 .ForMember(x => x.Error, opt => opt.Ignore())
@@ -36,11 +43,11 @@ namespace Internet_banking.Core.Application.Mappings
                 .ForMember(x => x.Error, opt => opt.Ignore())
                 .ReverseMap();
 
-            CreateMap<AuthenticationResponse, UserVM>()               
+            CreateMap<AuthenticationResponse, UserVM>()
                .ReverseMap()
                .ForMember(x => x.HasError, opt => opt.Ignore())
                .ForMember(x => x.Error, opt => opt.Ignore());
-
+               
             CreateMap<TypeAccount, TypeAccountVM>()
               .ReverseMap()
               .ForMember(x => x.LastModified, opt => opt.Ignore())

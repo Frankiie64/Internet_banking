@@ -17,9 +17,13 @@ namespace Internet_banking.Infrastructure.Identity.Seeds
             defaultUser.UserName = "SuperAdminUser";
             defaultUser.Email = "SuperAdminUser100@gmail.com";
             defaultUser.Firstname = "John";
+            defaultUser.DocumementId = "89238983839";
+            defaultUser.PhoneNumber = "80997809";
             defaultUser.Lastname = "Doe";
             defaultUser.EmailConfirmed = true;
             defaultUser.PhoneNumberConfirmed = true;
+            defaultUser.IsActive = true;
+
 
             if (userManager.Users.All(user => user.Id != defaultUser.Id))
             {

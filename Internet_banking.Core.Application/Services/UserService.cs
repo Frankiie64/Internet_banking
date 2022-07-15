@@ -37,6 +37,11 @@ namespace Internet_banking.Core.Application.Services
             RegisterRequest registerRequest = mapper.Map<RegisterRequest>(vm);
             return await accountServices.RegisterUserAsync(registerRequest, origin);
         }
+        public async Task<RegisterResponse> UpdateUserAsync(SaveUserVM vm)
+        {
+            RegisterRequest registerRequest = mapper.Map<RegisterRequest>(vm);
+            return await accountServices.UpdateUserAsync(registerRequest);
+        }
         public async Task<string> ConfirmEmailAsync(string userId, string token)
         {
             return await accountServices.ConfirmEmailAsync(userId, token);
@@ -59,12 +64,17 @@ namespace Internet_banking.Core.Application.Services
         public async Task<UserVM> GetUserByIdAsync(string id)
         {
             return mapper.Map<UserVM>(await accountServices.GetUserByIdAsync(id));
-        }        
+        }
+        public async Task<SaveUserVM> GetSaveUserVMByIdAsync(string id)
+        {
+            var item = mapper.Map<SaveUserVM>(await accountServices.GetUserByIdAsync(id));
+            return item;
+        }
         public async Task<List<UserVM>> GetAllClientsAsync()
         {
             List<UserVM> items = mapper.Map<List<UserVM>>(await accountServices.GetAllUsersAsync());
 
-            items = items.Where(clients => clients.Roles[0] == "Cliente" && clients.IsVerified == true).ToList();
+            items = items.Where(clients => clients.Roles[0] == "Cliente").ToList();
 
             return items;
         }

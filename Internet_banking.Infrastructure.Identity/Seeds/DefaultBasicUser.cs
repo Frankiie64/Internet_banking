@@ -22,6 +22,7 @@ namespace Internet_banking.Infrastructure.Identity.Seeds
             defaultUser.DocumementId = "9009";
             defaultUser.EmailConfirmed = true;
             defaultUser.PhoneNumberConfirmed = true;
+            defaultUser.IsActive = true;
 
             if (userManager.Users.All(user=>user.Id != defaultUser.Id))
             {

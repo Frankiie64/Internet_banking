@@ -15,7 +15,9 @@ namespace Internet_banking.Core.Application.Interfaces.Services
         Task<List<UserVM>> GetAllUsersAsync();
         Task<List<UserVM>> GetAllClientsAsync();
         Task<UserVM> GetUserByIdAsync(string id);
+        Task<SaveUserVM> GetSaveUserVMByIdAsync(string id);
         Task<AuthenticationResponse> IsVerified(string id);
+        Task<RegisterResponse> UpdateUserAsync(SaveUserVM vm);
         Task SignOutAsync();
     }
 }

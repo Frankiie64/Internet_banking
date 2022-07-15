@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
       "projectName": "Internet_banking.Core.Domain",
-      "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
+      "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
       "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Core.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",

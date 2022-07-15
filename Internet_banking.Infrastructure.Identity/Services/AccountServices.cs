@@ -50,10 +50,10 @@ namespace Internet_banking.Infrastructure.Identity.Services
                 return response;
             }
 
-            if (!user.EmailConfirmed)
+            if (!user.IsActive)
             {
                 response.HasError = true;
-                response.Error = $"Confirme su correo.";
+                response.Error = $"Su cuenta esta inactiva.";
                 return response;
             }
 
@@ -102,7 +102,10 @@ namespace Internet_banking.Infrastructure.Identity.Services
                 Firstname = request.Firstname,
                 Lastname = request.Lastname,
                 DocumementId = request.DocumementId,
-                UserName = request.Username,                
+                UserName = request.Username,     
+                PhoneNumber = request.PhoneNumber,
+                EmailConfirmed = true,
+                PhoneNumberConfirmed = true
             };
 
             var result = await userManager.CreateAsync(user, request.Password);
@@ -110,12 +113,11 @@ namespace Internet_banking.Infrastructure.Identity.Services
             if (result.Succeeded)
             {
                 await userManager.AddToRoleAsync(user, request.Rol);
-                var url = await SendVerificationEmailUrl(user, origin);                              
             }
             else
             {
                 response.HasError = true;
-                response.Error = $"Ha ocurrido un error creando el usuario";
+                response.Error = $"Utilice una contraseña mas segura";
                 return response;
             }
 
@@ -242,19 +244,23 @@ namespace Internet_banking.Infrastructure.Identity.Services
                 AuthenticationResponse item = new AuthenticationResponse
                 {
                     Id = vm.Id,
-                    Firstname=vm.Firstname,
-                    Lastname=vm.Lastname,
-                    DocumementId=vm.DocumementId,
+                    Firstname = vm.Firstname,
+                    Lastname = vm.Lastname,
+                    DocumementId = vm.DocumementId,
                     Username = vm.UserName,
                     Email = vm.Email,
+                    PhoneNumber = vm.PhoneNumber,
                     Roles = rol.ToList(),
-                    IsVerified = vm.EmailConfirmed
+                    IsVerified = vm.IsActive
                 };
 
-                if(item.Roles[0] == "Basic" && item.Roles.Count() == 1)
+                if(item.Roles.Count() == 1)
                 {
-                    item.Roles.Clear();
-                    item.Roles.Add("Cliente");
+                    if (item.Roles[0] == "Basic")
+                    {
+                        item.Roles.Clear();
+                        item.Roles.Add("Cliente");
+                    }                  
                 }
 
                 list.Add(item);
@@ -273,8 +279,12 @@ namespace Internet_banking.Infrastructure.Identity.Services
                 Id = vm.Id,
                 Username = vm.UserName,
                 Email = vm.Email,
+                DocumementId = vm.DocumementId,
+                Firstname = vm.Firstname,
+                Lastname = vm.Lastname,
+                PhoneNumber = vm.PhoneNumber,
                 Roles = rol.ToList(),
-                IsVerified = vm.EmailConfirmed
+                IsVerified = vm.IsActive
             };
 
             return item;
@@ -286,7 +296,13 @@ namespace Internet_banking.Infrastructure.Identity.Services
 
             var rol = await userManager.GetRolesAsync(vm).ConfigureAwait(false);
 
-            vm.EmailConfirmed = vm.EmailConfirmed == true ? false : true;
+            if (vm.EmailConfirmed == false)
+            {
+                string token = await userManager.GenerateEmailConfirmationTokenAsync(vm);
+                var response = await userManager.ConfirmEmailAsync(vm, token);
+            }
+
+            vm.IsActive = vm.IsActive == true ? false : true;
 
             await userManager.UpdateAsync(vm);
 
@@ -296,10 +312,83 @@ namespace Internet_banking.Infrastructure.Identity.Services
                 Username = vm.UserName,
                 Email = vm.Email,
                 Roles = rol.ToList(),
-                IsVerified = vm.EmailConfirmed
+                IsVerified = vm.IsActive
             };
 
             return item;
+        }
+        public async Task<RegisterResponse> UpdateUserAsync(RegisterRequest request)
+        {
+            RegisterResponse response = new();
+            response.HasError = false;
+
+            var userWithUsername = await userManager.FindByNameAsync(request.Username);
+
+            if (userWithUsername != null && userWithUsername.UserName != request.Username)
+            {
+                response.HasError = true;
+                response.Error = $"El nombre de usuario '{request.Username}' ya  existe.";
+                return response;
+            }
+
+            var userWithEmail = await userManager.FindByEmailAsync(request.Email);
+
+            if (userWithEmail != null && userWithEmail.Email != request.Email)
+            {
+                response.HasError = true;
+                response.Error = $"El email '{request.Email}' ya esta en uso.";
+                return response;
+            }
+
+
+            var user = await userManager.FindByIdAsync(request.Id);
+            {
+                user.Email = request.Email;
+                user.Firstname = request.Firstname;
+                user.Lastname = request.Lastname;
+                user.DocumementId = request.DocumementId;
+                user.UserName = request.Username;
+                user.PhoneNumber = request.PhoneNumber;
+                user.EmailConfirmed = true;
+                user.PhoneNumberConfirmed = true;
+                
+            }
+
+            string error = string.Empty;
+            var result = await userManager.UpdateAsync(user);
+
+            if (!result.Succeeded && result.Errors.Count() == 1)
+            {
+                error = result.Errors.FirstOrDefault(eror => eror.Code == "duplicate Username").Code;
+            }
+
+            
+
+            if (!string.IsNullOrWhiteSpace(error) || result.Succeeded)
+            {
+                await userManager.RemovePasswordAsync(user);
+
+                result = await userManager.AddPasswordAsync(user, request.Password);
+
+                if (!result.Succeeded)
+                {
+                    response.HasError = true;
+                    response.Error = $"Utilice una contraseña mas segura";
+                    return response;
+                }
+            }
+            else
+            {
+                response.HasError = true;
+                response.Error = $"Ha ocurrido un error creando el usuario";
+                return response;
+            }
+
+            var item = await userManager.FindByEmailAsync(user.Email);
+
+            response.IdClient = item.Id;
+
+            return response;
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "StctKnJmUUKy09FEUoVCa6OJDg+bdre2ZIh5Ue9+yzOLMZb5M0iWacJf0c/hGvZUJA1KAgu7nmpfrIV9efCMLQ==",
+  "dgSpecHash": "vmuOENr9kdy3kmLFG8zY/nv96ow4RsQnvQ8/dnXnP0VjT+dCBW4aV8cT4K0s9eodeRfBWAW8xQo2CDwTBmTxzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj",
+  "projectFilePath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Franklyn\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Franklyn\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
