@@ -3,6 +3,7 @@ using Internet_banking.Core.Application.Dtos.Account;
 using Internet_banking.Core.Application.ViewModels.Products;
 using Internet_banking.Core.Application.ViewModels.TypeAccount;
 using Internet_banking.Core.Application.ViewModels.Users;
+using Internet_banking.Core.Application.ViewModels.Users.Client;
 using Internet_banking.Core.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,13 @@ namespace Internet_banking.Core.Application.Mappings
              .ReverseMap()
              .ForMember(x => x.IsVerified, opt => opt.Ignore())
              .ForMember(x => x.Roles, opt => opt.Ignore());
+
+            CreateMap<AuthenticationResponse, SaveClienteVM>()
+            .ForMember(x => x.ConfirmPassword, opt => opt.Ignore())
+            .ForMember(x => x.Rol, opt => opt.Ignore())            
+            .ReverseMap()
+            .ForMember(x => x.IsVerified, opt => opt.Ignore())
+            .ForMember(x => x.Roles, opt => opt.Ignore());
 
             CreateMap<ForgotPassowordRequest, ForgotPasswordVM>()
                 .ForMember(x => x.HasError, opt => opt.Ignore())

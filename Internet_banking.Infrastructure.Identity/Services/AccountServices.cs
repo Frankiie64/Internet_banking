@@ -83,7 +83,7 @@ namespace Internet_banking.Infrastructure.Identity.Services
             if (userWithUsername != null)
             {
                 response.HasError = true;
-                response.Error = $"El nombre de usuario '{request.Username}' ya existe.";
+                response.Error = $"El nombre de usuario '{request.Username}' existe.";
                 return response;
             }
 
@@ -92,7 +92,7 @@ namespace Internet_banking.Infrastructure.Identity.Services
             if (userWithEmail != null)
             {
                 response.HasError = true;
-                response.Error = $"El email '{request.Email}' ya fue registrado.";
+                response.Error = $"El email '{request.Email}' fue registrado.";
                 return response;
             }
 

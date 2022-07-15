@@ -1,5 +1,5 @@
-﻿using Internet_banking.Core.Application.ViewModels.Clients;
-using Internet_banking.Core.Application.ViewModels.TypeAccount;
+﻿using Internet_banking.Core.Application.ViewModels.TypeAccount;
+using Internet_banking.Core.Application.ViewModels.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +15,6 @@ namespace Internet_banking.Core.Application.ViewModels.Products
         public TypeAccountVM TypeAccount { get; set; }
         public double Amount { get; set; }
         public string IdClient { get; set; }
-        public ClientVM client { get; set; }
+        public UserVM client { get; set; }
     }
 }

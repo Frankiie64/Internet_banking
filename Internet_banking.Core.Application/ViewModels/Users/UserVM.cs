@@ -16,5 +16,6 @@ namespace Internet_banking.Core.Application.ViewModels.Users
         public string Username { get; set; }
         public List<string> Roles { get; set; }
         public bool IsVerified { get; set; }
+        public bool IsClient { get; set; }
     }
 }
