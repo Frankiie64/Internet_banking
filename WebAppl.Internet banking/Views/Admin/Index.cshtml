@@ -26,38 +26,20 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
-                {
-                <tr>
-                    <td>@item.Username</td>
-                    <td>@item.Email</td>
-                    <td>@(item.Roles.Count>1?"SuperUsuario":$"{item.Roles[0]}")</td>
-                    <td>@(item.IsVerified == true ? "Activa" : "Inactiva")</td>
-                    <td class="justify-content-end">
-                        <a asp-controller="Admin" asp-action="Edit" class=" btn btn-primary btn-sm" asp-route-Id=@item.Id><i class="bi bi-pencil-square"></i> Editar</a>
-                        <button class=" btn btn-success btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            @(item.IsVerified == true?"Inactivar":"Activar")
-                        </button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Confirmacion</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p class="text-body">Estas seguro que desea @(item.IsVerified == true?"Inactivar":"Activar") esta cuenta ? </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <a asp-controller="Admin" asp-action="IsVerified" asp-route-Id=@item.Id type="button" class="btn btn-primary">Aceptar</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </tr>
+                    @foreach (UserVM item in Model)
+                    {
+                    <tr>
+                        <td>@item.Username</td>
+                        <td>@item.Email</td>
+                        <td>@(item.Roles.Count>1?"SuperUsuario":$"{item.Roles[0]}")</td>
+                        <td>@(item.IsVerified == true ? "Activa" : "Inactiva")</td>
+                        <td class="justify-content-end">                         
+                            <a type="button" asp-controller="Admin" asp-action="IsVerified" class=" btn btn-success btn-sm" asp-route-id=@item.Id><i class="bi bi-pencil-square"></i> @(item.IsVerified == true?"Inactivar":"Activar")</a>
+                            <a asp-controller="Admin" asp-action="Edit" class=" btn btn-primary btn-sm" asp-route-id=@item.Id><i class="bi bi-pencil-square"></i> Editar</a>
+                        </td>
+                    </tr>
                 }
-            </tbody>
+                </tbody>
         </table>
     </div>
 </div>
