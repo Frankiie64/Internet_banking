@@ -322,9 +322,11 @@ namespace Internet_banking.Infrastructure.Identity.Services
             RegisterResponse response = new();
             response.HasError = false;
 
+            var user = await userManager.FindByIdAsync(request.Id);
+
             var userWithUsername = await userManager.FindByNameAsync(request.Username);
 
-            if (userWithUsername != null && userWithUsername.UserName != request.Username)
+            if (userWithUsername != null && user.UserName != request.Username)
             {
                 response.HasError = true;
                 response.Error = $"El nombre de usuario '{request.Username}' ya  existe.";
@@ -333,7 +335,7 @@ namespace Internet_banking.Infrastructure.Identity.Services
 
             var userWithEmail = await userManager.FindByEmailAsync(request.Email);
 
-            if (userWithEmail != null && userWithEmail.Email != request.Email)
+            if (userWithEmail != null && user.Email != request.Email)
             {
                 response.HasError = true;
                 response.Error = $"El email '{request.Email}' ya esta en uso.";
@@ -341,8 +343,7 @@ namespace Internet_banking.Infrastructure.Identity.Services
             }
 
 
-            var user = await userManager.FindByIdAsync(request.Id);
-            {
+            
                 user.Email = request.Email;
                 user.Firstname = request.Firstname;
                 user.Lastname = request.Lastname;
@@ -350,16 +351,14 @@ namespace Internet_banking.Infrastructure.Identity.Services
                 user.UserName = request.Username;
                 user.PhoneNumber = request.PhoneNumber;
                 user.EmailConfirmed = true;
-                user.PhoneNumberConfirmed = true;
-                
-            }
+                user.PhoneNumberConfirmed = true;                
 
             string error = string.Empty;
             var result = await userManager.UpdateAsync(user);
 
             if (!result.Succeeded && result.Errors.Count() == 1)
             {
-                error = result.Errors.FirstOrDefault(eror => eror.Code == "duplicate Username").Code;
+                error = result.Errors.FirstOrDefault(eror => eror.Code == "DuplicateUserName").Code;
             }
 
             
