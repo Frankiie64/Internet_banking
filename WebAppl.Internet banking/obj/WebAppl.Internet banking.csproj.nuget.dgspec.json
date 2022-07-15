@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj": {}
+    "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
+    "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj",
         "projectName": "Internet_banking.Core.Application",
-        "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj",
-        "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\obj\\",
+        "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj",
+        "packagesPath": "C:\\Users\\Eleikel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eleikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
               }
             }
           }
@@ -92,21 +92,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
+    "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
         "projectName": "Internet_banking.Core.Domain",
-        "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
-        "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj",
+        "packagesPath": "C:\\Users\\Eleikel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eleikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,21 +146,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj": {
+    "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj",
         "projectName": "Internet_banking.Infrastructure.Identity",
-        "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj",
-        "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Identity\\obj\\",
+        "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj",
+        "packagesPath": "C:\\Users\\Eleikel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Identity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eleikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,11 +174,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
               },
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj"
               }
             }
           }
@@ -243,21 +243,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj": {
+    "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
         "projectName": "Internet_banking.Infrastructure.Persistence",
-        "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Eleikel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eleikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -271,11 +271,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
               },
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
               }
             }
           }
@@ -318,21 +318,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
+    "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj",
         "projectName": "Internet_banking.Infrastructure.Shared",
-        "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj",
-        "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\obj\\",
+        "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj",
+        "packagesPath": "C:\\Users\\Eleikel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eleikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -346,11 +346,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
               },
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
               }
             }
           }
@@ -393,21 +393,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj": {
+    "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
+        "projectUniqueName": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
         "projectName": "WebAppl.Internet banking",
-        "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
-        "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\WebAppl.Internet banking\\obj\\",
+        "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\WebAppl.Internet banking\\WebAppl.Internet banking.csproj",
+        "packagesPath": "C:\\Users\\Eleikel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\WebAppl.Internet banking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eleikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -421,17 +421,17 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
               },
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Identity\\Internet_banking.Infrastructure.Identity.csproj"
               },
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj"
               },
-              "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
-                "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Delta\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj"
+              "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj": {
+                "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\Banking\\Internet_banking\\Internet_banking.Infrastructure.Shared\\Internet_banking.Infrastructure.Shared.csproj"
               }
             }
           }
@@ -479,7 +479,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
