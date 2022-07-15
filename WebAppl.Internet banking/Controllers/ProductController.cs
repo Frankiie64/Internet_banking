@@ -31,7 +31,7 @@ namespace WebAppl.Internet_banking.Controllers
         {
             return View(await servicesUser.GetAllClientsAsync());
         }
-        public async Task<IActionResult> CreateClientWithProduct(string id, bool value = true)
+        public async Task<IActionResult> AddProduct(string id, bool value = true)
         {
             if (value)
             {
@@ -52,46 +52,10 @@ namespace WebAppl.Internet_banking.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> CreateClientWithProduct(SaveProductVM vm)
+        public async Task<IActionResult> AddProduct(SaveProductVM vm)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(vm);
-            }
-
-            if (string.IsNullOrWhiteSpace(vm.IdClient))
-            {
-               var item = await CreateClientWithProduct();
-
-                if (item.HasError)
-                {
-                    return RedirectToRoute(new { controller = "Product", action = "Error"/*crea una vista en caso de que el usuario se cree mal*/ });
-                }
-                else
-                {
-                    vm.IdClient = item.IdClient;
-                }
-            }
-            
-            await services.CreateAsync(vm);
-
-            return RedirectToRoute(new { controller = "Product", action = "Index" });
+            return View();
         }
-        private async Task<RegisterResponse> CreateClientWithProduct()
-        {
-            SaveUserVM vm = SingletonRepository.Instance.client;
-            string origin = SingletonRepository.Instance.origin;
-
-            RegisterResponse response = await servicesUser.RegisterAsync(vm, origin);
-
-            if (response.HasError)
-            {
-                vm.HasError = response.HasError;
-                vm.Error = response.Error;
-
-                return response;
-            }
-            return response;
-        }
+        
     }
 }

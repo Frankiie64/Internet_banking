@@ -83,7 +83,7 @@ namespace Internet_banking.Infrastructure.Identity.Services
             if (userWithUsername != null)
             {
                 response.HasError = true;
-                response.Error = $"El nombre de usuario '{request.Username}' ya fue existe.";
+                response.Error = $"El nombre de usuario '{request.Username}' ya existe.";
                 return response;
             }
 
@@ -234,6 +234,8 @@ namespace Internet_banking.Infrastructure.Identity.Services
         public async Task<List<AuthenticationResponse>> GetAllUsersAsync()
         {
             var items = await userManager.Users.ToListAsync();
+
+            
 
             List<AuthenticationResponse> list = new();
 

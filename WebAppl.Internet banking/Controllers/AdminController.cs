@@ -1,8 +1,11 @@
 ﻿using Internet_banking.Core.Application.Dtos.Account;
 using Internet_banking.Core.Application.helper;
 using Internet_banking.Core.Application.Interfaces.Services;
+using Internet_banking.Core.Application.ViewModels.Products;
 using Internet_banking.Core.Application.ViewModels.Users;
+using Internet_banking.Core.Application.ViewModels.Users.Client;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,9 +18,18 @@ namespace WebAppl.Internet_banking.Controllers
     public class AdminController : Controller
     {
         private readonly IUserService userService;
-        public AdminController(IUserService userService)
+        private readonly IProductServices productServices;
+        private readonly ITypeAccountService typeAccountService;
+        private readonly IHttpContextAccessor context;
+        AuthenticationResponse user;
+
+        public AdminController(IUserService userService,IProductServices productServices,ITypeAccountService typeAccountService, IHttpContextAccessor context)
         {
             this.userService = userService;
+            this.context = context;
+            this.productServices = productServices;
+            this.typeAccountService = typeAccountService;
+             user = context.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
         public async Task<IActionResult> Index()
         {
@@ -50,6 +62,10 @@ namespace WebAppl.Internet_banking.Controllers
         }
         public async Task<IActionResult> UpdateAdmin(string id)
         {
+            if (id == user.Id)
+            {
+                return RedirectToRoute(new { controller = "User", action = "AccessDenied" });
+            }
             var item = await userService.GetSaveUserVMByIdAsync(id);
             return View("CreateAdmin", item);
         }
@@ -73,11 +89,11 @@ namespace WebAppl.Internet_banking.Controllers
         }
         public IActionResult CreateClient()
         {
-            return View(new SaveUserVM());
+            return View(new SaveClienteVM());
         }
 
         [HttpPost]
-        public IActionResult CreateClient(SaveUserVM vm)
+        public async Task<IActionResult> CreateClient(SaveClienteVM vm)
         {
             if (!ModelState.IsValid)
             {
@@ -86,14 +102,40 @@ namespace WebAppl.Internet_banking.Controllers
 
             var origin = Request.Headers["origin"];
 
-            SingletonRepository.Instance.client = vm;
-            SingletonRepository.Instance.origin = origin;
+            RegisterResponse response = await userService.RegisterAsync(vm, origin);
 
-            return RedirectToRoute(new { controller = "Product", action = "CreateClientWithProduct", id = string.Empty, value = false });
+            if (response.HasError)
+            {
+                vm.HasError = response.HasError;
+                vm.Error = response.Error;
+                return View(vm);
+            }
+
+            var list = await typeAccountService.GetAllViewModelAsync();
+
+            SaveProductVM productVM = new SaveProductVM();
+
+            productVM.IdAccount = list.FirstOrDefault(item => item.Title == "Cuenta Principal").Id;
+            productVM.Amount = vm.amount;
+            productVM.IdClient = response.IdClient;
+
+            productVM = await productServices.CreateAsync(productVM);
+
+            if (productVM.Id == 0 || productVM == null)
+            {
+                vm.HasError = true;
+                vm.Error = "Ocurrio un problema creando al producto de la cuenta";
+            }
+
+            return RedirectToRoute(new { controller = "Admin", action = "Index" });
         }
 
         public async Task<IActionResult> IsVerified(string id)
         {
+            if (id == user.Id)
+            {
+                return RedirectToRoute(new { controller = "User", action = "AccessDenied" });
+            }
             await userService.IsVerified(id);
 
             return RedirectToRoute

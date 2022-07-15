@@ -1,6 +1,6 @@
 ﻿@using Internet_banking.Core.Application.Enums;
-@using Internet_banking.Core.Application.ViewModels.Users;
-@model SaveUserVM;
+@using Internet_banking.Core.Application.ViewModels.Users.Client;
+@model SaveClienteVM;
 
 @{
     ViewData["Title"] = "Crear usuario Cliente";
@@ -16,7 +16,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     }
-    <form method="post" asp-controller="Admin" asp-action="CreateAdmin">
+    <form method="post" asp-controller="Admin" asp-action="CreateClient">
         <div class="col-8 mx-auto gap-4 text-center ">
             <div class="d-flex gap-3 justify-content-between">
                 <div class="mb-2 form-group">
@@ -51,8 +51,13 @@
                     <input asp-for="Username" class="form-control" />
                     <span asp-validation-for="Username" class="text-danger"></span>
                 </div>
-            </div>
+            </div>          
             <div class="d-flex mb-4 form-group">
+                <div class="w-50 me-4">
+                    <label asp-for="amount" class="form-label">Monto de Apertura</label>
+                    <input asp-for="amount" class="form-control" />
+                    <span asp-validation-for="amount" class="text-danger"></span>
+                </div>
                 <div class="w-50 me-4 ">
                     <label asp-for="Password" class="form-label">Contraseña</label>
                     <input asp-for="Password" class="form-control" />
