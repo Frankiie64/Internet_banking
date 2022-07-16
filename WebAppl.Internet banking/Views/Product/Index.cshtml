@@ -1,4 +1,5 @@
-﻿@using Internet_banking.Core.Application.ViewModels.Users;
+﻿@using Internet_banking.Core.Application.Enums;
+@using Internet_banking.Core.Application.ViewModels.Users;
 @model List<UserVM>
 
 <div class="container">
@@ -17,31 +18,74 @@
         {
             <div class="card-body">
                 <h5 class="card-title">Seleccione el cliente al que desea agregarle un producto</h5>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Cedula</th>
-                            <th>Nombre</th>
-                            <th>Nombre de usuario</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
+                <form method="post" asp-controller="Product" asp-action="AddProduct">
+                    <table class="table table-bordered">
+                        <thead>
                             <tr>
-                                <td>@item.DocumementId</td>
-                                <td>@item.Firstname @item.Lastname</td>
-                                <td>@item.Username</td>
-                                <td>@item.Email</td>
-                                <td>
-                                    <a asp-action="CreateClientWithProduct" asp-controller="Product" class=" btn btn-primary btn-sm" asp-route-Id=@item.Id><i class="bi bi-pencil-square"></i>Agregar producto</a>
-                                </td>
+                                <th>Cedula</th>
+                                <th>Nombre</th>
+                                <th>Nombre de usuario</th>
+                                <th>Email</th>
                             </tr>
-                        }
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.DocumementId</td>
+                                    <td>@item.Firstname @item.Lastname</td>
+                                    <td>@item.Username</td>
+                                    <td>@item.Email</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            Agregar Producto
+                                        </button>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="text-body">Seleccione el tipo de cuenta que desea agregar al usuario:</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="IdAccount" value="@((int)TypesAccountEnum.Cuentadeahorro)" id="Ahorro" checked>
+                                                            <label class="form-check-label" for="Ahorro">
+                                                                Cuenta de Ahorros
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="IdAccount" value="@((int)TypesAccountEnum.Tarjetadecredito)" id="Credito" >
+                                                            <label class="form-check-label" for="Credito">
+                                                                Tarjeta de Credito
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="IdAccount"  value="@((int)TypesAccountEnum.Prestamo)" id="Prestamo" >
+                                                            <label class="form-check-label" for="Prestamo">
+                                                                Prestamo
+                                                            </label>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Aceptar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input name="IdClient" hidden value="@item.Id" />
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </form>
             </div>
         }
     </div>
 </div>
+
+

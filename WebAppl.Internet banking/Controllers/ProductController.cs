@@ -31,31 +31,30 @@ namespace WebAppl.Internet_banking.Controllers
         {
             return View(await servicesUser.GetAllClientsAsync());
         }
-        public async Task<IActionResult> AddProduct(string id, bool value = true)
-        {
-            if (value)
-            {
-               var item = await servicesUser.GetUserByIdAsync(id);
+        public async Task<IActionResult> AddProduct(SaveProductVM vm)
+        {            
+               var item = await servicesUser.GetUserByIdAsync(vm.IdClient);
 
                 if (item.Roles[0] != Roles.Basic.ToString())
                 {
                     return RedirectToRoute(new { controller = "User", action = "AccessDenied" });
                 }
 
-                ViewData["user"] = item;
-                return View("AddProduct", new SaveProductVM() { IdClient = item.Id });
-            }
-
-            ViewBag.typesAccount = servicesTypeAccount.GetAllViewModelAsync();
-
-            return View("AddProduct", new SaveProductVM());
-
+            return View("AddProduct", new SaveProductVM() { IdClient = vm.IdClient,IdAccount = vm.IdAccount });
+            
         }
         [HttpPost]
-        public async Task<IActionResult> AddProduct(SaveProductVM vm)
+        public async Task<IActionResult> AddProductPost(SaveProductVM vm)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View("AddProduct", vm);
+            }
+
+             await services.CreateAsync(vm);
+
+            return RedirectToRoute(new { controller = "Product", action = "Index" });
         }
-        
+
     }
 }
