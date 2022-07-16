@@ -141,6 +141,61 @@ namespace WebAppl.Internet_banking.Controllers
             return RedirectToRoute
                 (new { controller = "Admin", action = "Index" });
         }
+        public async Task<IActionResult> UpdateClient(string id)
+        {
+            if (id == user.Id)
+            {
+                return RedirectToRoute(new { controller = "User", action = "AccessDenied" });
+            }
+            var item = await userService.GetSaveClientVMByIdAsync(id);
+           
+            return View("CreateClient", item);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateClient(SaveClienteVM vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("CreateClient", vm);
+            }
 
+            RegisterResponse response = await userService.UpdateUserAsync(vm);
+
+            if (response.HasError)
+            {
+                vm.HasError = response.HasError;
+                vm.Error = response.Error;
+                return View("CreateClient", vm);
+            }
+
+            List<ProductsVM> list = await productServices.GetAllViewModelAsync();
+            var listAccounts = await typeAccountService.GetAllViewModelAsync();
+
+            var AccountPrincipal = list .FirstOrDefault
+                (item => item.IdClient == response.IdClient
+                && item.IdAccount == listAccounts.SingleOrDefault(item => item.Title == "Cuenta Principal").Id);
+
+            AccountPrincipal.Amount += vm.amount;
+
+            SaveProductVM saveProduct = new SaveProductVM
+            {
+                Id = AccountPrincipal.Id,
+                IdAccount = AccountPrincipal.IdAccount,
+                IdClient = AccountPrincipal.IdClient,
+                Amount = AccountPrincipal.Amount
+            };
+
+
+             bool value = await productServices.UpdateAsync(saveProduct,AccountPrincipal.Id);
+
+            if (!value)
+            {
+                vm.HasError = true;
+                vm.Error = "Ha ocurrido un problema intentando añadir balance a la cuenta";
+                return View("CreateClient", vm);
+            }
+
+            return RedirectToRoute(new { controller = "Admin", action = "Index" });
+        }
     }
 }

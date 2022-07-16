@@ -4,11 +4,18 @@
 
 @{
     ViewData["Title"] = "Crear usuario Cliente";
-
+    bool editMode = !string.IsNullOrWhiteSpace(Model.Id) ? true : false;
 }
 
 <div class="row  rounded bg-white ps-3 pe-0 pb-3 pt-3">
-    <h2 class="fw-bolder py-3">Crear usuario tipo Cliente</h2>
+    @if (editMode)
+    {
+        <h2 class="fw-bolder py-3">Editar usuario tipo Cliente</h2>
+    }
+    else
+    {
+        <h2 class="fw-bolder py-3">Crear usuario tipo Cliente</h2>
+    }
     @if (Model.HasError)
     {
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -16,42 +23,42 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     }
-    <form method="post" asp-controller="Admin" asp-action="CreateClient">
+    <form method="post" asp-controller="Admin" asp-action="@(editMode?"UpdateClient":"CreateClient")">
         <div class="col-8 mx-auto gap-4 text-center ">
             <div class="d-flex gap-3 justify-content-between">
                 <div class="mb-2 form-group">
                     <label asp-for="Firstname" class="form-label">Nombre</label>
-                    <input asp-for="Firstname" class="form-control" />
+                    <input asp-for="Firstname" value="@Model.Firstname" class="form-control" />
                     <span asp-validation-for="Firstname" class="text-danger"></span>
                 </div>
                 <div class="mb-2 form-group">
                     <label asp-for="Lastname" class="form-label">Apellido</label>
-                    <input asp-for="Lastname" class="form-control" />
+                    <input asp-for="Lastname" value="@Model.Lastname" class="form-control" />
                     <span asp-validation-for="Lastname" class="text-danger"></span>
                 </div>
                 <div class="mb-2 form-group">
                     <label asp-for="PhoneNumber" class="form-label">Telefono</label>
-                    <input asp-for="PhoneNumber" class="form-control" />
+                    <input asp-for="PhoneNumber" value="@Model.PhoneNumber" class="form-control" />
                     <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                 </div>
             </div>
             <div class="d-flex gap-3 justify-content-between">
                 <div class="mb-2 form-group">
                     <label asp-for="DocumementId" class="form-label">Cedula</label>
-                    <input asp-for="DocumementId" class="form-control" />
+                    <input asp-for="DocumementId" value="@Model.DocumementId" class="form-control" />
                     <span asp-validation-for="DocumementId" class="text-danger"></span>
                 </div>
                 <div class="mb-2 form-group">
                     <label asp-for="Email" class="form-label">Correo</label>
-                    <input asp-for="Email" class="form-control" />
+                    <input asp-for="Email" value="@Model.Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="mb-2 form-group">
                     <label asp-for="Username" class="form-label">Nombre de usuario</label>
-                    <input asp-for="Username" class="form-control" />
+                    <input asp-for="Username" value="@Model.Username" class="form-control" />
                     <span asp-validation-for="Username" class="text-danger"></span>
                 </div>
-            </div>          
+            </div>
             <div class="d-flex mb-4 form-group">
                 <div class="w-50 me-4">
                     <label asp-for="amount" class="form-label">Monto de Apertura</label>

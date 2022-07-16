@@ -10,7 +10,15 @@
 }
 
 <div class="row  rounded bg-white ps-3 pe-0 pb-3 pt-3">
-    <h2 class="fw-bolder py-3">Crear usuario tipo Administrador</h2>
+    @if (editMode)
+    {
+        <h2 class="fw-bolder py-3">Editar usuario tipo Administrador</h2>
+
+    }
+    else
+    {
+        <h2 class="fw-bolder py-3">Crear usuario tipo Administrador</h2>
+    }
     @if (Model.HasError)
     {
         <div class="alert alert-danger alert-dismissible fade show" role="alert">

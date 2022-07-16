@@ -1,5 +1,4 @@
-﻿using Internet_banking.Core.Application.ViewModels.Clients;
-using Internet_banking.Core.Application.ViewModels.TypeAccount;
+﻿using Internet_banking.Core.Application.ViewModels.TypeAccount;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

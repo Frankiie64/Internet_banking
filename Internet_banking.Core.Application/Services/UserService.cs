@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Internet_banking.Core.Application.Dtos.Account;
+using Internet_banking.Core.Application.Enums;
 using Internet_banking.Core.Application.Interfaces.Services;
 using Internet_banking.Core.Application.ViewModels.Users;
+using Internet_banking.Core.Application.ViewModels.Users.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +61,17 @@ namespace Internet_banking.Core.Application.Services
         public async Task<List<UserVM>> GetAllUsersAsync()
         {
             var items = mapper.Map<List<UserVM>>( await accountServices.GetAllUsersAsync());
+
+            foreach (var item in items)
+            {
+                if (item.Roles.Count() == 1)
+                {
+                    foreach (var ls in item.Roles)
+                    {
+                        item.IsClient = ls == Roles.Admin.ToString() ? false : true;
+                    }
+                }
+            }
             return items;
         }
         public async Task<UserVM> GetUserByIdAsync(string id)
@@ -68,6 +81,11 @@ namespace Internet_banking.Core.Application.Services
         public async Task<SaveUserVM> GetSaveUserVMByIdAsync(string id)
         {
             var item = mapper.Map<SaveUserVM>(await accountServices.GetUserByIdAsync(id));
+            return item;
+        }
+        public async Task<SaveClienteVM> GetSaveClientVMByIdAsync(string id)
+        {
+            var item = mapper.Map<SaveClienteVM>(await accountServices.GetUserByIdAsync(id));
             return item;
         }
         public async Task<List<UserVM>> GetAllClientsAsync()
