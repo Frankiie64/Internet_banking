@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Internet_banking.Core.Application.Enums;
 using Internet_banking.Core.Application.Interfaces.Repositories;
 using Internet_banking.Core.Application.Interfaces.Services;
 using Internet_banking.Core.Application.ViewModels.Products;
@@ -26,6 +27,72 @@ namespace Internet_banking.Core.Application.Services
             vm.Code = await GenerateCode(2);
             return await base.CreateAsync(vm);
         }
+
+        public async override Task<SaveProductVM> DeleteAsync(int id)
+        {
+            SaveProductVM vm = new SaveProductVM();
+            vm.HasError = false;
+
+            var item = await repo.GetByIdAsync(id);
+
+            if (item.IdAccount == (int)TypesAccountEnum.CuentaPrincipal)
+            {
+                vm.HasError = true;
+                vm.Error = "No puedes eliminar la cuenta principal de un usuario";
+                return vm;
+            }
+            if (item.IdAccount == (int)TypesAccountEnum.Cuentadeahorro)
+            {
+                var list = await repo.GetAllAsync();
+
+                var accountPrincipal = list.Where(pr => pr.IdClient == item.IdClient && pr.IdAccount == (int)TypesAccountEnum.CuentaPrincipal).FirstOrDefault();
+
+                accountPrincipal.Amount += item.Amount;
+                               
+            }
+
+            if (item.IdAccount == (int)TypesAccountEnum.Tarjetadecredito )
+            {
+                if (item.Paid != 0 )
+                {
+                    vm.HasError = true;
+                    vm.Error = "Este usuario no podra eliminar esta tarjeta de credito hasta que pague lo que debe.";
+                    return vm;
+                }           
+            }
+
+            if (item.IdAccount == (int)TypesAccountEnum.Prestamo)
+            {
+                if (item.Amount != item.Paid)
+                {
+                    vm.HasError = true;
+                    vm.Error = "Este usuario no podra eliminar este producto  hasta que pague lo que debe.";
+                    return vm;
+                }
+            }
+
+           var value = await base.DeleteAsync(id);
+
+            if (value != null)
+            {
+                vm.HasError = true;
+                vm.Error = "Ha ocurrido un error intentando eliminar este producto.";
+                return vm;
+            }
+
+            return vm;
+        }
+
+        public async Task<List<ProductsVM>> GetAllWithIncludeAsync()
+        {
+            var list = await repo.GetAllWithIncludeAsync(new List<string>{ "TypeAccount" });
+
+            var listMapped = mapper.Map<List<ProductsVM>>(list);
+
+            return listMapped;
+
+        }
+
         private async Task<int> GenerateCode(int counter)
         {
             int code = 0;

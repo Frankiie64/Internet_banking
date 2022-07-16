@@ -10,6 +10,7 @@ namespace Internet_banking.Core.Application.Interfaces.Services
 {
     public interface IProductServices : IGenericServices<SaveProductVM, ProductsVM,Products >
     {
+        public Task<List<ProductsVM>> GetAllWithIncludeAsync();
 
     }
 }

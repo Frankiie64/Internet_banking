@@ -40,10 +40,16 @@ namespace Internet_banking.Core.Application.Services
             return saveViewModel;
         }
 
-        public virtual async Task<bool> DeleteAsync(int id)
+        public virtual async Task<SaveViewModel> DeleteAsync(int id)
         {
             var model = await _repository.GetByIdAsync(id);
-            return await _repository.DeleteAsync(model);
+            bool value = await _repository.DeleteAsync(model);
+
+            if (!value)
+            {
+                return _mapper.Map<SaveViewModel>(model);
+            }
+            return null;
         }
 
         public virtual async Task<SaveViewModel> GetByIdSaveViewModelAsync(int id)

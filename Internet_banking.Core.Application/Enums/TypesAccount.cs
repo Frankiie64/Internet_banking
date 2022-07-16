@@ -2,7 +2,8 @@
 {
     public enum TypesAccountEnum
     {
-        Cuentadeahorro = 2,
+        CuentaPrincipal = 1,
+        Cuentadeahorro ,
         Tarjetadecredito,
         Prestamo
     }

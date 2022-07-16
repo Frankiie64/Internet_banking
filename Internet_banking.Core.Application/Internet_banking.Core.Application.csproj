@@ -19,4 +19,8 @@
     <ProjectReference Include="..\Internet_banking.Core.Domain\Internet_banking.Core.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\Product\" />
+  </ItemGroup>
+
 </Project>

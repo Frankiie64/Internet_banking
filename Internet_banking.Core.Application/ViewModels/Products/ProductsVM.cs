@@ -17,5 +17,7 @@ namespace Internet_banking.Core.Application.ViewModels.Products
         public double Amount { get; set; }
         public string IdClient { get; set; }
         public UserVM client { get; set; }
+        public double Paid { get; set; } = 0;
+
     }
 }
