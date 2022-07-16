@@ -15,7 +15,7 @@ namespace Internet_banking.Core.Application.Interfaces.Services
 
         Task<SaveViewModel> CreateAsync(SaveViewModel vm);
 
-        Task<bool> DeleteAsync(int id);
+        Task<SaveViewModel> DeleteAsync(int id);
 
         Task<SaveViewModel> GetByIdSaveViewModelAsync(int id);
 

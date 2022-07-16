@@ -13,5 +13,7 @@ namespace Internet_banking.Core.Domain.Entities
         public TypeAccount TypeAccount { get; set; }
         public double Amount { get; set; }
         public string IdClient { get; set; }
+        public int Code { get; set; }
+        public double Paid { get; set; } = 0;
     }
 }
