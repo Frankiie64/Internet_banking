@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace WebAppl.Internet_banking.Controllers
 {
+
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {

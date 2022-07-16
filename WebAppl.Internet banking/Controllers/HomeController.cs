@@ -1,5 +1,6 @@
 ﻿using Internet_banking.Core.Application.Dtos.Account;
 using Internet_banking.Core.Application.Interfaces.Services;
+using Internet_banking.Core.Application.ViewModels.Products;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -17,9 +18,11 @@ namespace WebAppl.Internet_banking.Controllers
     public class HomeController : Controller
     {
         private readonly IUserService userService;
-        public HomeController(IUserService userService)
+        private readonly IProductServices _productServices;
+        public HomeController(IUserService userService, IProductServices productServices)
         {
             this.userService = userService;
+            _productServices = productServices;
         }
 
         [ServiceFilter(typeof(SelectHome))]
@@ -32,11 +35,14 @@ namespace WebAppl.Internet_banking.Controllers
         {
             return View("IndexAdmin");
         }
+
         [Authorize(Roles ="Basic")]
-        public IActionResult IndexClient()
+        public  IActionResult IndexClient()
         {
             return View();
-        }        
+            //List<ProductsVM> list = await _productServices.GetAllViewModelAsync();
+
+        }
 
     }
 }
