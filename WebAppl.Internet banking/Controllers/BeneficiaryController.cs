@@ -1,5 +1,8 @@
-﻿using Internet_banking.Core.Application.Interfaces.Services;
+﻿using Internet_banking.Core.Application.Dtos.Account;
+using Internet_banking.Core.Application.helper;
+using Internet_banking.Core.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -7,14 +10,20 @@ namespace WebAppl.Internet_banking.Controllers
 {
 
     [Authorize(Roles = "Basic")]
-    public class ClienteController : Controller
+    public class BeneficiaryController : Controller
     {
         private readonly IUserService userService;
+        private readonly IHttpContextAccessor _context;
+        AuthenticationResponse user;
 
-        public ClienteController(IUserService userService)
+
+        public BeneficiaryController(IUserService userService, IHttpContextAccessor context)
         {
            this.userService = userService;
+            _context = context;
+            user = context.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
+
 
         //public Task<IActionResult> Index()
         //{

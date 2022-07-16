@@ -40,8 +40,6 @@ namespace WebAppl.Internet_banking.Controllers
         public  IActionResult IndexClient()
         {
             return View();
-            //List<ProductsVM> list = await _productServices.GetAllViewModelAsync();
-
         }
 
     }

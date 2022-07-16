@@ -65,6 +65,8 @@ namespace Internet_banking.Infrastructure.Persistence.Context
 
         public DbSet<Products> Products { get; set; }
         public DbSet<TypeAccount> TypeAccounts { get; set; }
+        public DbSet<Beneficiary> Beneficiary { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -76,6 +78,8 @@ namespace Internet_banking.Infrastructure.Persistence.Context
             
             modelBuilder.Entity<Products>().ToTable("products");
             modelBuilder.Entity<TypeAccount>().ToTable("typeAccount");
+            modelBuilder.Entity<Beneficiary>().ToTable("Beneficiary");
+
 
             #endregion
 
@@ -83,9 +87,11 @@ namespace Internet_banking.Infrastructure.Persistence.Context
 
             //Primary Key
 
-        
+
             modelBuilder.Entity<Products>().HasKey(x => x.Id);
             modelBuilder.Entity<TypeAccount>().HasKey(x => x.Id);
+            modelBuilder.Entity<Beneficiary>().HasKey(x => x.Id);
+
 
             //Relationships
 
@@ -94,6 +100,8 @@ namespace Internet_banking.Infrastructure.Persistence.Context
          .WithOne(pr => pr.TypeAccount)
          .HasForeignKey(pr => pr.IdAccount)
          .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+
+
 
             #endregion
 

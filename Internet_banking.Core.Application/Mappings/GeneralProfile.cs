@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Internet_banking.Core.Application.Dtos.Account;
+using Internet_banking.Core.Application.ViewModels.Clients;
+using Internet_banking.Core.Application.ViewModels.Clients.Beneficiary;
 using Internet_banking.Core.Application.ViewModels.Products;
 using Internet_banking.Core.Application.ViewModels.TypeAccount;
 using Internet_banking.Core.Application.ViewModels.Users;
@@ -95,6 +97,22 @@ namespace Internet_banking.Core.Application.Mappings
             .ReverseMap()
             .ForMember(x => x.TypeAccount, opt => opt.Ignore())
             .ForMember(x => x.client, opt => opt.Ignore());
+
+
+            CreateMap<Beneficiary, BeneficiaryVM>()
+            .ForMember(x => x.User, opt => opt.Ignore())
+            .ForMember(x => x.Beneficiary, opt => opt.Ignore())
+            .ReverseMap();
+
+
+            CreateMap<Beneficiary, SaveBeneficiaryVM>()
+            .ReverseMap();
+
+            CreateMap<SaveBeneficiaryVM, BeneficiaryVM>()
+            .ForMember(x => x.User, opt => opt.Ignore())
+            .ForMember(x => x.Beneficiary, opt => opt.Ignore())
+            .ReverseMap();
+
         }
     }
 }

@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Internet_banking.Core.Application.ViewModels.Clients
+namespace Internet_banking.Core.Application.ViewModels.Clients.Beneficiary
 {
-    public class SaveBeneficiarioVM
+    public class SaveBeneficiaryVM
     {
-        public string IdClient { get; set; }
+        public int Id { get; set; }
+        public string UserId { get; set; } // My ID
 
         [Required(ErrorMessage = "Debes ingresar un numero de cuenta")]
-        public int IdAccount { get; set; }
+        public int BeneficiaryCode { get; set; }
     }
 }

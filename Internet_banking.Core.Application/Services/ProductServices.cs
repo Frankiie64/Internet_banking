@@ -15,11 +15,14 @@ namespace Internet_banking.Core.Application.Services
     public class ProductServices:GenericServices<SaveProductVM,ProductsVM,Products>, IProductServices
     {
         private readonly IProductRepository repo;
+        private readonly IUserService _userService;
+
         private readonly IMapper mapper;
-        public ProductServices(IProductRepository repo, IMapper mapper) : base(repo, mapper)
+        public ProductServices(IProductRepository repo, IUserService userService, IMapper mapper) : base(repo, mapper)
         {
             this.repo = repo;
             this.mapper = mapper;
+            _userService = userService;
         }
 
         public async override Task<SaveProductVM> CreateAsync(SaveProductVM vm)
@@ -85,9 +88,14 @@ namespace Internet_banking.Core.Application.Services
 
         public async Task<List<ProductsVM>> GetAllWithIncludeAsync()
         {
+            var users = await _userService.GetAllUsersAsync();
             var list = await repo.GetAllWithIncludeAsync(new List<string>{ "TypeAccount" });
-
             var listMapped = mapper.Map<List<ProductsVM>>(list);
+
+            foreach (var item in listMapped)
+            {
+                item.client = users.Where(x => x.Id == item.IdClient).SingleOrDefault();
+            }
 
             return listMapped;
 
