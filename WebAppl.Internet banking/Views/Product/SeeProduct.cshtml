@@ -15,19 +15,16 @@
                     @if (item.IdAccount == (int)TypesAccountEnum.CuentaPrincipal || item.IdAccount == (int)TypesAccountEnum.Cuentadeahorro)
                     {
                         <p class="card-text">Saldo : @item.Amount</p>
-                        <a href="#" class="btn btn-warning">Agregar fondos</a>
                     }
                     else if (item.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
                     {
                         <p class="card-text">Limite de la tarjeta : @item.Amount</p>
                         <p class="card-text">Total Tomado : @item.Paid</p>
-                        <a href="#" class="btn btn-warning">Pagar</a>
                     }
                     else if (item.IdAccount == (int)TypesAccountEnum.Prestamo)
                     {
                         <p class="card-text">Prestamo : @item.Amount</p>
                         <p class="card-text">Total pagado : @item.Paid</p>
-                        <a href="#" class="btn btn-warning">Pagar</a>
                     }
                     <a asp-controller="Product" asp-action="DeleteProduct" asp-route-id="@item.Id" asp-route-IdClient="@item.IdClient" class="btn btn-danger">Eliminar</a>
                 </div>

@@ -78,6 +78,33 @@ namespace Internet_banking.Infrastructure.Persistence.Migrations
                     b.ToTable("products");
                 });
 
+            modelBuilder.Entity("Internet_banking.Core.Domain.Entities.Transactional", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CountProduct")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Count_transactional")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Paids")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserActives")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserInactives")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Transactional");
+                });
+
             modelBuilder.Entity("Internet_banking.Core.Domain.Entities.TypeAccount", b =>
                 {
                     b.Property<int>("Id")

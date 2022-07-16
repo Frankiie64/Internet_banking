@@ -15,19 +15,19 @@
                     @if (Model.IdAccount == 2)
                     {
                         <label asp-for="Amount" class="form-label">Monto de apertura de la cuenta de ahorros</label>
-                        <input asp-for="Amount" type="number" value="0" class="form-control border-1 border-dark" />
+                        <input asp-for="Amount" type="number" step="any" value="0" class="form-control border-1 border-dark" />
                         <span asp-validation-for="Amount" class="text-danger fw-bolder"></span>
                     }
                     else if (Model.IdAccount == 3)
                     {
                         <label asp-for="Amount" class="form-label">Limite de la tarjeta de credito</label>
-                        <input asp-for="Amount" type="number" class="form-control border-1 border-dark" />
+                        <input asp-for="Amount" type="number" step="any" value="0" class="form-control border-1 border-dark" />
                         <span asp-validation-for="Amount" class="text-danger fw-bolder"></span>
                     }
                     else if (Model.IdAccount == 4)
                     {
                         <label asp-for="Amount" class="form-label">Monto que sera prestado</label>
-                        <input asp-for="Amount" type="number" class="form-control border-1 border-dark" />
+                        <input asp-for="Amount" type="number" step="any" value="0" class="form-control border-1 border-dark" />
                         <span asp-validation-for="Amount" class="text-danger fw-bolder"></span>
                     }
                 </div>

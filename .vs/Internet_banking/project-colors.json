@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "638ff5b1-9da7-48b8-9c2b-f561f2daee15": {
+      "ProjectGuid": "638ff5b1-9da7-48b8-9c2b-f561f2daee15",
+      "DisplayName": "WebAppl.Internet banking",
+      "ColorIndex": 0
+    },
+    "27cfb81f-e219-442f-94f3-dc9110fc1986": {
+      "ProjectGuid": "27cfb81f-e219-442f-94f3-dc9110fc1986",
+      "DisplayName": "Internet_banking.Core.Application",
+      "ColorIndex": 1
+    },
+    "9efc32fc-d30c-4fd3-91bb-117cb354e2df": {
+      "ProjectGuid": "9efc32fc-d30c-4fd3-91bb-117cb354e2df",
+      "DisplayName": "Internet_banking.Core.Domain",
+      "ColorIndex": 2
+    },
+    "ea05110a-3372-40e6-b3b7-9de24f04cc70": {
+      "ProjectGuid": "ea05110a-3372-40e6-b3b7-9de24f04cc70",
+      "DisplayName": "Internet_banking.Infrastructure.Persistence",
+      "ColorIndex": 3
+    },
+    "47437180-efb0-4d9f-be44-b022005e8539": {
+      "ProjectGuid": "47437180-efb0-4d9f-be44-b022005e8539",
+      "DisplayName": "Internet_banking.Infrastructure.Identity",
+      "ColorIndex": 4
+    },
+    "c718121c-d382-444b-9c8a-06f4618a291a": {
+      "ProjectGuid": "c718121c-d382-444b-9c8a-06f4618a291a",
+      "DisplayName": "Internet_banking.Infrastructure.Shared",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

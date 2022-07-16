@@ -66,7 +66,8 @@ namespace Internet_banking.Infrastructure.Persistence.Context
         public DbSet<Products> Products { get; set; }
         public DbSet<TypeAccount> TypeAccounts { get; set; }
         public DbSet<Beneficiary> Beneficiary { get; set; }
-
+        public DbSet<Transactional> Transactional { get; set; }
+        
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -79,6 +80,7 @@ namespace Internet_banking.Infrastructure.Persistence.Context
             modelBuilder.Entity<Products>().ToTable("products");
             modelBuilder.Entity<TypeAccount>().ToTable("typeAccount");
             modelBuilder.Entity<Beneficiary>().ToTable("Beneficiary");
+            modelBuilder.Entity<Transactional>().ToTable("Transactional");
 
 
             #endregion
@@ -91,6 +93,7 @@ namespace Internet_banking.Infrastructure.Persistence.Context
             modelBuilder.Entity<Products>().HasKey(x => x.Id);
             modelBuilder.Entity<TypeAccount>().HasKey(x => x.Id);
             modelBuilder.Entity<Beneficiary>().HasKey(x => x.Id);
+            modelBuilder.Entity<Transactional>().HasKey(x => x.Id);
 
 
             //Relationships

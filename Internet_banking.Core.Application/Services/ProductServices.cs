@@ -28,6 +28,17 @@ namespace Internet_banking.Core.Application.Services
         public async override Task<SaveProductVM> CreateAsync(SaveProductVM vm)
         {
             vm.Code = await GenerateCode(2);
+            if (vm.IdAccount == (int)TypesAccountEnum.Prestamo)
+            {
+                var accounts = await repo.GetAllAsync();
+
+                var AccountPricipal = accounts.Where(x => x.IdAccount == (int)TypesAccountEnum.CuentaPrincipal && x.IdClient == vm.IdClient).SingleOrDefault();
+
+                AccountPricipal.Amount += vm.Amount;
+
+                await repo.UpdateAsync(AccountPricipal,AccountPricipal.Id);
+
+            }
             return await base.CreateAsync(vm);
         }
 

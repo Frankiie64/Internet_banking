@@ -58,3 +58,18 @@ C:\Users\Eleikel\Desktop\ITLA\Programacion III\Banking\Internet_banking\Internet
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\Banking\Internet_banking\Internet_banking.Core.Application\obj\Debug\net5.0\refint\Internet_banking.Core.Application.dll
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\Banking\Internet_banking\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.pdb
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\Banking\Internet_banking\Internet_banking.Core.Application\obj\Debug\net5.0\ref\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Application.deps.json
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\bin\Debug\net5.0\ref\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Application.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Domain.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\bin\Debug\net5.0\Internet_banking.Core.Domain.pdb
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.csproj.AssemblyReference.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.AssemblyInfoInputs.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.AssemblyInfo.cs
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.csproj.CoreCompileInputs.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.csproj.CopyComplete
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\ref\Internet_banking.Core.Application.dll
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Application\obj\Debug\net5.0\Internet_banking.Core.Application.pdb
