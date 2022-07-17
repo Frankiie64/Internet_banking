@@ -32,31 +32,29 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         @foreach (var item in Model)
                         {
-
                             <tr>
                                 <td>@item.DocumementId</td>
                                 <td>@item.Firstname @item.Lastname</td>
                                 <td>@item.Username</td>
                                 <td>@item.Email</td>
                                 <td>
-                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="@($"#{item.Username}")">
                                         Agregar Producto
                                     </button>
                                     <a type="button" class="btn btn-secondary btn-sm" asp-controller="Product" asp-action="SeeProduct" asp-route-id="@item.Id">
                                         Ver productos
                                     </a>
-                                    <form method="post" asp-controller="Product" asp-action="AddProduct">
-                                        <input hidden value="@item.Id" name="IdClient" />
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="@item.Username" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <form method="post" asp-controller="Product" asp-action="AddProduct">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="exampleModalLabel">Elige tu tipo de cuenta</h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
+                                                    <input hidden value="@item.Id" name="IdClient" />
                                                     <div class="modal-body">
                                                         <p class="text-body">Seleccione el tipo de cuenta que desea agregar al usuario:</p>
                                                         <div class="form-check">
@@ -84,8 +82,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         }
