@@ -2,6 +2,10 @@
 @using Internet_banking.Core.Application.ViewModels.Products;
 @model List<ProductsVM>;
 
+@{
+    ViewData["Title"] = "Ver productos";
+}
+
 <div class="row ">
     @foreach (var item in Model)
     {

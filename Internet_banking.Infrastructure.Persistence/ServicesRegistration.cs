@@ -42,6 +42,8 @@ namespace Internet_banking.Infrastructure.Persistence
             //Other repos
             services.AddTransient<ITypeAccountRepository, TypeAccountRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IBeneficiaryRepository, BeneficiaryRepository>();
+            services.AddTransient<ITransactionRepository, TransactionRepository>();
 
             #endregion
 

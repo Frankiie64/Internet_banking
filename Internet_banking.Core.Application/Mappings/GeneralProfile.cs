@@ -3,6 +3,7 @@ using Internet_banking.Core.Application.Dtos.Account;
 using Internet_banking.Core.Application.ViewModels.Clients;
 using Internet_banking.Core.Application.ViewModels.Clients.Beneficiary;
 using Internet_banking.Core.Application.ViewModels.Products;
+using Internet_banking.Core.Application.ViewModels.Transational;
 using Internet_banking.Core.Application.ViewModels.TypeAccount;
 using Internet_banking.Core.Application.ViewModels.Users;
 using Internet_banking.Core.Application.ViewModels.Users.Client;
@@ -113,6 +114,24 @@ namespace Internet_banking.Core.Application.Mappings
             .ForMember(x => x.Beneficiary, opt => opt.Ignore())
             .ReverseMap();
 
+            CreateMap<Transactional, TransationalVM>()
+           .ForMember(x => x.Count_transactional_History, opt => opt.Ignore())
+           .ForMember(x => x.Paids_History, opt => opt.Ignore())
+           .ForMember(x => x.UserActives, opt => opt.Ignore())
+           .ForMember(x => x.UserInactives, opt => opt.Ignore())
+           .ForMember(x => x.CountProduct, opt => opt.Ignore())
+           .ReverseMap();
+
+            CreateMap<Transactional, SaveTransationalVM>()
+          .ReverseMap();
+
+            CreateMap<TransationalVM, SaveTransationalVM>()
+          .ReverseMap()
+            .ForMember(x => x.Count_transactional_History, opt => opt.Ignore())
+           .ForMember(x => x.Paids_History, opt => opt.Ignore())
+           .ForMember(x => x.UserActives, opt => opt.Ignore())
+           .ForMember(x => x.UserInactives, opt => opt.Ignore())
+           .ForMember(x => x.CountProduct, opt => opt.Ignore());
         }
     }
 }

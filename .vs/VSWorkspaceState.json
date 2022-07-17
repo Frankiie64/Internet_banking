@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Internet_banking.Core.Application",
+    "\\Internet_banking.Core.Application\\Seeds",
+    "\\Internet_banking.Infrastructure.Identity",
+    "\\Internet_banking.Infrastructure.Identity\\Seeds",
+    "\\Internet_banking.Infrastructure.Persistence",
+    "\\Internet_banking.Infrastructure.Persistence\\Migrations",
+    "\\WebAppl.Internet banking",
+    "\\WebAppl.Internet banking\\Views",
+    "\\WebAppl.Internet banking\\Views\\Shared"
   ],
-  "SelectedNode": "\\Internet_banking.sln",
+  "SelectedNode": "\\Internet_banking.Core.Application\\Seeds\\DefaultTransantionsTable.cs",
   "PreviewInSolutionExplorer": false
 }

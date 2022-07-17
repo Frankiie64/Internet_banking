@@ -17,12 +17,10 @@ namespace WebAppl.Internet_banking.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly IUserService userService;
-        private readonly IProductServices _productServices;
-        public HomeController(IUserService userService, IProductServices productServices)
+        private readonly ITrasantionalService service;
+        public HomeController(ITrasantionalService service)
         {
-            this.userService = userService;
-            _productServices = productServices;
+            this.service = service;            
         }
 
         [ServiceFilter(typeof(SelectHome))]
@@ -31,9 +29,10 @@ namespace WebAppl.Internet_banking.Controllers
             return View();
         }
         [Authorize(Roles ="Admin")]
-        public IActionResult IndexAdmin()
+        public async Task<IActionResult> IndexAdmin()
         {
-            return View("IndexAdmin");
+            var items = await service.GetByDateTrasations();
+            return View("IndexAdmin",items);
         }
 
         [Authorize(Roles ="Basic")]

@@ -31,8 +31,9 @@ namespace WebAppl.Internet_banking
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
                     var productRepository = services.GetRequiredService<ITypeAccountRepository>();
+                    var TrasationalRepository = services.GetRequiredService<ITransactionRepository>();
 
-                    
+
                     await DefaultRoles.SeedAsync(userManager, roleManager);
                     await DefaultBasicUser.SeedAsync(userManager, roleManager);
                     await DefaultAdminUser.SeedAsync(userManager,roleManager);
@@ -43,6 +44,7 @@ namespace WebAppl.Internet_banking
                     await DefaultSavingAccount.SeedAsync(productRepository);
                     await DefaultCreditCard.SeedAsync(productRepository);
                     await DefaultDebt.SeedAsync(productRepository);
+                    await DefaultTransantionsTable.SeedAsync(TrasationalRepository);
                 }
                 catch (Exception ex)
                 {

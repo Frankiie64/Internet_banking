@@ -1,4 +1,5 @@
-﻿using Internet_banking.Core.Domain.Entities;
+﻿using Internet_banking.Core.Application.Interfaces.Repositories;
+using Internet_banking.Core.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,20 @@ namespace Internet_banking.Infrastructure.Identity.Seeds
 {
     public class DefaultTransantionsTable
     {
-            public static async Task SeedAsync()
-            {
-                Transactional defaultUser = new();
-                defaultUser.Count_transactional = 0;
-                defaultUser.Paids = 0;
-                defaultUser.UserActives = 0;
-                defaultUser.UserInactives = 0;
-                defaultUser.Count_transactional = 0;
+        public static async Task SeedAsync(ITransactionRepository _repo)
+        {
+            Transactional Trasansition = new();
+            Trasansition.Count_transactional = 0;
+            Trasansition.Paids = 0;          
+            Trasansition.date = DateTime.Today;
 
+            var items = await _repo.GetAllAsync();
+
+            if (items.All(trasation => trasation.date != Trasansition.date))
+            {
+                var transactional = await _repo.createAsync(Trasansition);
             }
+
+        }
     }
 }

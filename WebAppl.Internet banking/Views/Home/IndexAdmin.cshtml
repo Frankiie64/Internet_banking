@@ -1,4 +1,9 @@
-﻿
+﻿@using Internet_banking.Core.Application.ViewModels.Transational;
+@model TransationalVM;
+
+@{
+    ViewData["Title"] = "Home";
+}
 
 <div class="container m-5 form-control shadow border-1 border-dark">
     <div class="row mx-auto mb-3">
@@ -7,25 +12,25 @@
         </div>
         <hr class="border-dark border-3 opacity-75 mb-3">
         <div class="col-4 mt-3">
-            <p class="text-body fs-4">Transacciones realizadas: 64</p>
+            <p class="text-body fs-4">Transacciones realizadas: @Model.Count_transactional</p>
         </div>
         <div class="col-8 mt-3">
-            <p class="text-body fs-4">Transacciones realizadas (Desde la creacion del sistema): 164</p>
+            <p class="text-body fs-4">Transacciones realizadas (Desde la creacion del sistema): @Model.Count_transactional_History</p>
         </div>
         <div class="col-4 mt-3">
-            <p class="text-body fs-4">Pagos realizados: 3</p>
+            <p class="text-body fs-4">Pagos realizados: @Model.Paids</p>
         </div>
         <div class="col-8 mt-3">
-            <p class="text-body fs-4">Pagos realizados (Desde la creacion del sistema): 13</p>
+            <p class="text-body fs-4">Pagos realizados (Desde la creacion del sistema): @Model.Paids_History</p>
         </div>
         <div class="col-4 mt-3">
-            <p class="text-body fs-4">Cuentas Activas : 311</p>
+            <p class="text-body fs-4">Cuentas Activas : @Model.UserActives</p>
         </div>
         <div class="col-6 mt-3">
-            <p class="text-body fs-4">Cuentas Inactivas: 112</p>
+            <p class="text-body fs-4">Cuentas Inactivas: @Model.UserInactives</p>
         </div>
         <div class="col-12 mt-3">
-            <p class="text-body fs-4">Cantidad total de los productos asignados a los clientes: 113</p>
+            <p class="text-body fs-4">Cantidad total de los productos asignados a los clientes: @Model.CountProduct</p>
         </div>
     </div>
 </div>

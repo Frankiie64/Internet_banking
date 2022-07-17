@@ -85,20 +85,14 @@ namespace Internet_banking.Infrastructure.Persistence.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CountProduct")
-                        .HasColumnType("int");
-
                     b.Property<int>("Count_transactional")
                         .HasColumnType("int");
 
                     b.Property<int>("Paids")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserActives")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserInactives")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("date")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
