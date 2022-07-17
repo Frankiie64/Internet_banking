@@ -34,7 +34,9 @@ namespace WebAppl.Internet_banking.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await userService.GetAllUsersAsync());
+            ViewBag.Users = await userService.GetAllUsersAsync();
+            
+            return View(new UserVM());
         }
 
         public IActionResult CreateAdmin()
@@ -131,13 +133,13 @@ namespace WebAppl.Internet_banking.Controllers
             return RedirectToRoute(new { controller = "Admin", action = "Index" });
         }
 
-        public async Task<IActionResult> IsVerified(string id)
+        public async Task<IActionResult> IsVerified(UserVM vm)
         {
-            if (id == user.Id)
+            if (vm.Id == user.Id)
             {
                 return RedirectToRoute(new { controller = "User", action = "AccessDenied" });
             }
-            await userService.IsVerified(id);
+            await userService.IsVerified(vm.Id);
 
             return RedirectToRoute
                 (new { controller = "Admin", action = "Index" });

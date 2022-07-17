@@ -2,15 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\Internet_banking.Core.Application",
-    "\\Internet_banking.Core.Application\\Seeds",
-    "\\Internet_banking.Infrastructure.Identity",
-    "\\Internet_banking.Infrastructure.Identity\\Seeds",
-    "\\Internet_banking.Infrastructure.Persistence",
-    "\\Internet_banking.Infrastructure.Persistence\\Migrations",
+    "\\Internet_banking.Core.Application\\Interfaces",
+    "\\Internet_banking.Core.Application\\Interfaces\\Services",
+    "\\Internet_banking.Core.Application\\ViewModels",
+    "\\Internet_banking.Core.Application\\ViewModels\\Users",
     "\\WebAppl.Internet banking",
+    "\\WebAppl.Internet banking\\Controllers",
     "\\WebAppl.Internet banking\\Views",
-    "\\WebAppl.Internet banking\\Views\\Shared"
+    "\\WebAppl.Internet banking\\Views\\Home",
+    "\\WebAppl.Internet banking\\Views\\Product"
   ],
-  "SelectedNode": "\\Internet_banking.Core.Application\\Seeds\\DefaultTransantionsTable.cs",
+  "SelectedNode": "\\Internet_banking.Core.Application\\Services\\TrasantionalService.cs",
   "PreviewInSolutionExplorer": false
 }

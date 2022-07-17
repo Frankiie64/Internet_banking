@@ -1,56 +1,82 @@
 ﻿@using Internet_banking.Core.Application.ViewModels.Users;
 @using Internet_banking.Core.Application.Enums;
-@model List<UserVM>;
+@model UserVM;
 
 @{
     ViewData["Title"] = "Usuarios";
 }
 
-@if (Model.Count == 0 || Model == null)
+@if (ViewBag.Users.Count == 0 || ViewBag.Users == null)
 {
 
-
-<h2>No hay usuario creado</h2>
+    <h2>No hay usuario creado</h2>
 }
 else
 {
-<div class="card">
-    <div class="card-header">
-        Administrar usuarios
-    </div>
-    <div class="card-body">
-        <div class="d-flex justify-content-end gap-3">
-            <a asp-controller="Admin" asp-action="CreateClient" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo cliente</a>
-            <a asp-controller="Admin" asp-action="CreateAdmin" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo administrador</a>
+    <div class="card">
+        <div class="card-header">
+            Administrar usuarios
         </div>
-        <hr />
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Nombre de usuario</th>
-                    <th>Email</th>
-                    <th>Rol</th>
-                    <th>Estado</th>
-                    <td class="fw-bolder" style="">Acciones</td>
-                </tr>
-            </thead>
-            <tbody>
-                    @foreach (UserVM item in Model)
-                    {
-                    <tr>
-                        <td>@item.Username</td>
-                        <td>@item.Email</td>
-                        <td>@(item.Roles.Count > 1 ? "SuperUsuario" : $"{item.Roles[0]}")</td>
-                        <td>@(item.IsVerified == true ? "Activa" : "Inactiva")</td>                       
-                        <td class="justify-content-end">                         
-                            <a type="button" asp-controller="Admin" asp-action="IsVerified" class=" btn btn-success btn-sm" asp-route-id=@item.Id><i class="bi bi-pencil-square"></i> @(item.IsVerified == true ? "Inactivar" : "Activar")</a>
-                            <a asp-controller="Admin" asp-action="@(item.IsClient?"UpdateClient":"UpdateAdmin")" class=" btn btn-primary btn-sm" asp-route-id=@item.Id><i class="bi bi-pencil-square"></i> Editar</a>
-                        </td>
-                    </tr>
-                    }
-                </tbody>
-        </table>
+        <div class="card-body">
+            <div class="d-flex justify-content-between ">
+                <div class="justify-content-start">
+                    <p>Tenga pendiente de que no puede editar su propio usuario</p>
+                </div>
+                <div class="justify-content-end">
+                    <a asp-controller="Admin" asp-action="CreateClient" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo cliente</a>
+                    <a asp-controller="Admin" asp-action="CreateAdmin" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i> Agregar un nuevo administrador</a>
+                </div>
+            </div>
+            <hr />
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre de usuario</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <td class="fw-bolder" style="">Acciones</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (UserVM item in ViewBag.Users)
+                        {
+                            <tr>
+                                <td>@item.Username</td>
+                                <td>@item.Email</td>
+                                <td>@(item.Roles.Count > 1 ? "SuperUsuario" : $"{item.Roles[0]}")</td>
+                                <td>@(item.IsVerified == true ? "Activa" : "Inactiva")</td>
+                                <td class="justify-content-end">
+                                    <a asp-controller="Admin" asp-action="@(item.IsClient ? "UpdateClient" : "UpdateAdmin")" class=" btn btn-primary btn-sm" asp-route-id=@item.Id><i class="bi bi-pencil-square"></i> Editar</a>
+                                    <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="@($"#{item.Username}")" )">
+                                        @(item.IsVerified == true ? "Inactivar" : "Activar")
+                                    </button>
+                                    <div class="modal fade" id="@item.Username" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <form method="post" asp-controller="Admin" asp-action="IsVerified">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Atencion</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Estas seguro de que deseas @(item.IsVerified == true ? "inactivar" : "activar") esta cuenta ?
+                                                    </div>
+                                                    <input hidden asp-for="Id" value="@item.Id" />
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
+                                                        <button type="submit" class="btn btn-danger">Aceptar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+        </div>
     </div>
-</div>
 }
 
