@@ -17,5 +17,16 @@ namespace Internet_banking.Infrastructure.Persistence.Repositories
         {
             this.db = db;
         }
+        public override async Task<bool> UpdateAsync(Products model, int id)
+        {
+            var product = db.Products.SingleOrDefault(item => item.Id == id);
+
+            model.Creadted = product.Creadted;
+            model.CreatedBy = product.CreatedBy;
+
+            return await base.UpdateAsync(model, id);
+
+        }
+
     }
 }

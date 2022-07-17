@@ -185,7 +185,8 @@ namespace WebAppl.Internet_banking.Controllers
                 Id = AccountPrincipal.Id,
                 IdAccount = AccountPrincipal.IdAccount,
                 IdClient = AccountPrincipal.IdClient,
-                Amount = AccountPrincipal.Amount
+                Amount = AccountPrincipal.Amount,
+                Code = AccountPrincipal.Code
             };
 
 
