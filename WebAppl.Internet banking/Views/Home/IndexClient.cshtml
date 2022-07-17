@@ -1,1 +1,40 @@
-﻿<h1>Client</h1>
+﻿@using Internet_banking.Core.Application.Enums;
+@using Internet_banking.Core.Application.ViewModels.Products
+@model List<ProductsVM>;
+
+@{
+    ViewData["Title"] = "Mis Productos";
+}
+<div class="container">
+    <h2 class="fw-bolder py-3">Bienvenido @Model[0].client.Username</h2>
+    <div class="row ">
+        @foreach (var item in Model)
+        {
+            <div class=" col-4">
+                <div class="card">
+                    <div class="card-header">
+                        @item.TypeAccount.Title
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Code</h5>
+                        @if (item.IdAccount == (int)TypesAccountEnum.CuentaPrincipal || item.IdAccount == (int)TypesAccountEnum.Cuentadeahorro)
+                        {
+                            <p class="card-text">Saldo : @item.Amount</p>
+                        }
+                        else if (item.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
+                        {
+                            <p class="card-text">Limite de la tarjeta : @item.Amount</p>
+                            <p class="card-text">Total Tomado : @item.Paid</p>
+                        }
+                        else if (item.IdAccount == (int)TypesAccountEnum.Prestamo)
+                        {
+                            <p class="card-text">Prestamo : @item.Amount</p>
+                            <p class="card-text">Total pagado : @item.Paid</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

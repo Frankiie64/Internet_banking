@@ -76,7 +76,7 @@
                 <input hidden asp-for="Rol" value="@Roles.Admin" class="form-control" />
                 <input hidden asp-for="Id" value="@Model.Id" />
                 <div class="w-50 mt-4 pt-2">
-                    <button type="submit" class="btn btn-primary">Crear usuario</button>
+                    <button type="submit" class="btn btn-primary">@(string.IsNullOrWhiteSpace(Model.Id)? "Crear usuario":"Actualizar usuario")</button>
                 </div>
             </div>
         </div>

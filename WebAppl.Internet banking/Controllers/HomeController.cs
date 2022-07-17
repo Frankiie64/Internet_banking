@@ -1,7 +1,9 @@
 ﻿using Internet_banking.Core.Application.Dtos.Account;
+using Internet_banking.Core.Application.helper;
 using Internet_banking.Core.Application.Interfaces.Services;
 using Internet_banking.Core.Application.ViewModels.Products;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,9 +20,16 @@ namespace WebAppl.Internet_banking.Controllers
     public class HomeController : Controller
     {
         private readonly ITrasantionalService service;
-        public HomeController(ITrasantionalService service)
+        private readonly IProductServices Productservice;
+        private readonly IHttpContextAccessor context;
+        AuthenticationResponse user;
+
+        public HomeController(ITrasantionalService service, IProductServices Productservice, IHttpContextAccessor context)
         {
-            this.service = service;            
+            this.service = service;
+            this.Productservice = Productservice;
+            this.context = context;
+            user = context.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
 
         [ServiceFilter(typeof(SelectHome))]
@@ -36,9 +45,11 @@ namespace WebAppl.Internet_banking.Controllers
         }
 
         [Authorize(Roles ="Basic")]
-        public  IActionResult IndexClient()
+        public async Task<IActionResult> IndexClient()
         {
-            return View();
+            var item = await Productservice.GetAllWithIncludeAsync();
+            item = item.Where(pr => pr.IdClient == user.Id).ToList();
+            return View("IndexClient",item);
         }
 
     }

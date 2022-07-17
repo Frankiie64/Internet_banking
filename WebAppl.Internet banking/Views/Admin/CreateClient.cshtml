@@ -85,7 +85,7 @@
                 </div>
                 <input hidden asp-for="Rol" value="@Roles.Basic" class="form-control" />
                 <div class="w-50 mt-4 pt-2">
-                    <button type="submit" class="btn btn-primary">Crear usuario</button>
+                    <button type="submit" class="btn btn-primary">@(string.IsNullOrWhiteSpace(Model.Id)? "Crear cliente":"Actualizar cliente")</button>
                 </div>
             </div>
         </div>
