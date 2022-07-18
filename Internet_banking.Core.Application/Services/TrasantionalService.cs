@@ -25,7 +25,17 @@ namespace Internet_banking.Core.Application.Services
             this.ProductRepo = ProductRepo;
         }
 
-        public async Task<TransationalVM> GetByDateTrasations()
+        public async Task<SaveTransationalVM> GetByDateTrasations()
+        {
+         
+            List<SaveTransationalVM> list = mapper.Map<List<SaveTransationalVM>>(await repo.GetAllAsync());
+
+            var item = list.Where(trasantions => trasantions.date == DateTime.Today).SingleOrDefault();
+
+            return item;
+        }
+
+        public async Task<TransationalVM> GetTransationalToday()
         {
             var clients = await userService.GetAllClientsAsync();
             var products = await ProductRepo.GetAllAsync();
@@ -33,6 +43,7 @@ namespace Internet_banking.Core.Application.Services
             List<TransationalVM> list = mapper.Map<List<TransationalVM>>(await repo.GetAllAsync());
 
             var item = list.Where(trasantions => trasantions.date == DateTime.Today).SingleOrDefault();
+
 
             foreach (var transation in list)
             {
@@ -46,5 +57,7 @@ namespace Internet_banking.Core.Application.Services
 
             return item;
         }
+
+
     }
 }

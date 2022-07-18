@@ -10,11 +10,11 @@ namespace Internet_banking.Core.Application.ViewModels.Users
     public class SaveUserVM
     {
         public string Id { get; set; }
-        [Required(ErrorMessage ="Debes ingresar tu Nombre")]
+        [Required(ErrorMessage = "Debes ingresar tu Nombre")]
         [DataType(DataType.Text)]
         public string Firstname { get; set; }
 
-        [Required(ErrorMessage ="Debes Ingresar tu Apellido")]
+        [Required(ErrorMessage = "Debes Ingresar tu Apellido")]
         [DataType(DataType.Text)]
         public string Lastname { get; set; }
         [Required(ErrorMessage = "Debes Ingresar tu Cedula")]

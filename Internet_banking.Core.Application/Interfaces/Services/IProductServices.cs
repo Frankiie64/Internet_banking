@@ -15,5 +15,8 @@ namespace Internet_banking.Core.Application.Interfaces.Services
 
         Task<SaveProductVM> GetByIdSAsync(string id);
 
+        Task<SaveProductVM> GetProductByCode(int code);
+
+
     }
 }

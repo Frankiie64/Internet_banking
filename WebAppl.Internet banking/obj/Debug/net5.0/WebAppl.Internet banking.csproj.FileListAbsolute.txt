@@ -2282,7 +2282,6 @@ C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet 
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Admin\CreateClient.cshtml.g.cs
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiarios.cshtml.g.cs
-C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiary\Beneficiarios.cshtml.g.cs
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiary\CreateBeneficiarios.cshtml.g.cs
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Home\IndexAdmin.cshtml.g.cs
@@ -2310,6 +2309,7 @@ C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet 
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\ref\WebAppl.Internet banking.dll
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\WebAppl.Internet banking.pdb
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\WebAppl.Internet banking.genruntimeconfig.cache
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Client\SaveMoney.cshtml.g.cs
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAppl.Internet banking\obj\Debug\net5.0\WebAppl.Internet banking.csproj.AssemblyReference.cache
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAppl.Internet banking\obj\Debug\net5.0\WebAppl.Internet banking.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAppl.Internet banking\obj\Debug\net5.0\WebAppl.Internet banking.AssemblyInfoInputs.cache
@@ -2776,3 +2776,5 @@ C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAp
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAppl.Internet banking\obj\Debug\net5.0\WebAppl.Internet banking.genruntimeconfig.cache
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAppl.Internet banking\obj\Debug\net5.0\ref\WebAppl.Internet banking.dll
 C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiary\Delete.cshtml.g.cs
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiary\Delete.cshtml.g.cs
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiary\Index.cshtml.g.cs
