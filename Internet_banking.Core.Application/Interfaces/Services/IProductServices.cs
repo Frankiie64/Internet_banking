@@ -8,9 +8,12 @@ using System.Threading.Tasks;
 
 namespace Internet_banking.Core.Application.Interfaces.Services
 {
-    public interface IProductServices : IGenericServices<SaveProductVM, ProductsVM,Products >
+    public interface IProductServices : IGenericServices<SaveProductVM, ProductsVM, Products>
     {
         public Task<List<ProductsVM>> GetAllWithIncludeAsync();
+        Task<bool> Exist(int code);
+
+        Task<SaveProductVM> GetByIdSAsync(string id);
 
     }
 }

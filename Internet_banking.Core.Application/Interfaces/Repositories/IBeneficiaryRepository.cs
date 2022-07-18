@@ -10,6 +10,7 @@ namespace Internet_banking.Core.Application.Interfaces.Repositories
     public interface IBeneficiaryRepository : IGenericRepository<Beneficiary>
     {
 
+        Task<Beneficiary> GetByIdAsync(string id);
 
     }
 }

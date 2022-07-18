@@ -1,6 +1,7 @@
 ﻿using Internet_banking.Core.Application.Interfaces.Repositories;
 using Internet_banking.Core.Domain.Entities;
 using Internet_banking.Infrastructure.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +29,16 @@ namespace Internet_banking.Infrastructure.Persistence.Repositories
 
         }
 
+
+        public async Task<bool> ExistAync(int code)
+        {
+            return await db.Set<Products>().AnyAsync(c => c.Code == code);
+        }
+
+        public async Task<Products> GetByIdAsync(string id)
+        {
+            return await db.Set<Products>().FindAsync(id);
+
+        }
     }
 }

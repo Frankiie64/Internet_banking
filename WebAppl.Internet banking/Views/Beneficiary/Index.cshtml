@@ -1,0 +1,116 @@
+﻿@using Internet_banking.Core.Application.ViewModels.Clients.Beneficiary;
+@*@model List<BeneficiaryVM>
+*@
+@model SaveBeneficiaryVM;
+
+
+@{
+    ViewData["Title"] = "Beneficiarios";
+}
+
+
+
+
+
+@Html.ValidationSummary(false, "",new {@class = "text-danger"})
+
+<main role="main" class="container">
+    <form method="post" asp-controller="Beneficiary" asp-action="Index">
+
+
+        <div class="d-flex justify-content-end gap-3">
+            <a asp-controller="Cliente" asp-action="CreateBeneficiarios" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle"></i> Agregar un beneficiario</a>
+        </div>
+        <hr />
+
+        <!-- Modal -->
+        <!-- Añadir form -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!--Input-->
+                        <label asp-for="BeneficiaryCode" class="form-label">Inserte un numero de Cuenta</label>
+                        <input asp-for="BeneficiaryCode" type="number" class="form-control" />
+                        <span asp-validation-for="BeneficiaryCode" class="text-danger"></span>
+
+                        <input type="hidden" asp-for="@Model.Id" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="starter-template">
+            <h1>Lista de Beneficiarios</h1>
+        </div>
+    </form>
+
+</main>
+
+@if (ViewBag.BeneficiaryList.Count == 0 || ViewBag.BeneficiaryList == null)
+{
+    <h5 class="card-title">Vacio</h5>
+
+}
+else
+{
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <p class="card-title fs-2">Beneficiarios</p>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">Listado de Beneficiarios</h5>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Numero de Cuenta</th>
+                            <th>Acciones</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (BeneficiaryVM item in ViewBag.BeneficiaryList)
+                        {
+
+
+                            <tr>
+                                <td>@item.Beneficiary.client.Firstname</td>
+                                <td>@item.Beneficiary.client.Lastname</td>
+                                <td>@item.BeneficiaryCode</td>
+                                <td>
+
+                                    <a asp-controller="Beneficiary" asp-action="Delete" asp-route-id="@item.Id" a class="btn btn-danger">Eliminar</a>
+
+                                </td>
+
+                                <td>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+}
+
+
+
+

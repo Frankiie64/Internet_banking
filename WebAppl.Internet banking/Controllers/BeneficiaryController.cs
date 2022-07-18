@@ -1,9 +1,13 @@
 ﻿using Internet_banking.Core.Application.Dtos.Account;
 using Internet_banking.Core.Application.helper;
 using Internet_banking.Core.Application.Interfaces.Services;
+using Internet_banking.Core.Application.ViewModels.Clients.Beneficiary;
+using Internet_banking.Core.Application.ViewModels.Products;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace WebAppl.Internet_banking.Controllers
@@ -12,55 +16,86 @@ namespace WebAppl.Internet_banking.Controllers
     [Authorize(Roles = "Basic")]
     public class BeneficiaryController : Controller
     {
+        private readonly IBeneficiaryServices _beneficiaryServices;
         private readonly IUserService userService;
+        private readonly IProductServices _productServices;
+
         private readonly IHttpContextAccessor _context;
         AuthenticationResponse user;
 
 
-        public BeneficiaryController(IUserService userService, IHttpContextAccessor context)
+        public BeneficiaryController(IUserService userService, IBeneficiaryServices beneficiaryServices, IProductServices productServices, IHttpContextAccessor context)
         {
-           this.userService = userService;
+            this.userService = userService;
             _context = context;
+            _beneficiaryServices = beneficiaryServices;
+            _productServices = productServices;
             user = context.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
 
-
-        //public Task<IActionResult> Index()
-        //{
-        //    return View();
-        //}
-
-        public IActionResult Beneficiarios()
+        public async Task<IActionResult> Index(int Id)
         {
-            return View("Beneficiarios");
+            var item = await _beneficiaryServices.GetAllViewModelAsync();
+            item = item.Where(x => x.UserId == user.Id).ToList();
+
+            ViewBag.BeneficiaryList = item;
+
+            return View(new SaveBeneficiaryVM());
         }
 
-        public IActionResult CreateBeneficiarios()
+
+        [HttpPost]
+        public async Task<IActionResult> Index(SaveBeneficiaryVM vm, int id)
         {
-            return View("CreateBeneficiarios");
+            vm.UserId = user.Id;
+            var item = await _beneficiaryServices.GetAllViewModelAsync();
+            item = item.Where(x => x.UserId == user.Id).ToList();
+
+            ViewBag.BeneficiaryList = item;
+
+
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index", new SaveBeneficiaryVM());
+            }
+
+
+            if (!await _productServices.Exist(vm.BeneficiaryCode))
+            {
+                ModelState.AddModelError("", $"El Numero de Cuenta {vm.BeneficiaryCode} no existe.");
+                return View("Index", vm);
+            }
+
+            var beneficiaryRepet = item.Any(x => x.BeneficiaryCode == vm.BeneficiaryCode);
+
+            if (beneficiaryRepet)
+            {
+                ModelState.AddModelError("", "Ya tienes agregado a este beneficiario");
+                return View("Index", vm);
+            }
+
+
+            SaveBeneficiaryVM beneficiaryVM = await _beneficiaryServices.CreateAsync(vm);
+
+            return RedirectToRoute(new { controller = "Beneficiary", action = "Index" });
         }
 
-        //public Task<IActionResult> RemoveBeneficiarios()
-        //{
-        //    return View("Beneficiarios");
-        //}
-
-        //public Task<IActionResult> Pagos()
-        //{
-        //    return View("Beneficiarios");
-        //}
-
-        //public Task<IActionResult> AvancesEfectivo()
-        //{
-        //    return View("Beneficiarios");
-        //}
-
-        //public Task<IActionResult> TransferenciaCuenta()
-        //{
-        //    return View("Beneficiarios");
-        //}
 
 
+        public async Task<IActionResult> Delete(int id)
+        {
+            return View(await _beneficiaryServices.GetByIdSAsync(id));
+
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteBeneficiary(SaveBeneficiaryVM vm)
+        {
+            
+            await _beneficiaryServices.DeleteAsync(vm.Id);
+
+            return RedirectToRoute(new { controller = "Beneficiary", action = "Index" });
+        }
 
     }
 }
