@@ -5827,19 +5827,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eleikel\\.nuget\\packages\\": {}
+    "C:\\Users\\Franklyn\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\NetBanking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Charlie\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
       "projectName": "Internet_banking.Infrastructure.Persistence",
-      "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\NetBanking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
-      "packagesPath": "C:\\Users\\Eleikel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\NetBanking\\Internet_banking\\Internet_banking.Infrastructure.Persistence\\obj\\",
+      "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Charlie\\Internet_banking.Infrastructure.Persistence\\Internet_banking.Infrastructure.Persistence.csproj",
+      "packagesPath": "C:\\Users\\Franklyn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Charlie\\Internet_banking.Infrastructure.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Eleikel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Franklyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5853,11 +5853,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\NetBanking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
-              "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\NetBanking\\Internet_banking\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
+            "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Charlie\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj": {
+              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Charlie\\Internet_banking.Core.Application\\Internet_banking.Core.Application.csproj"
             },
-            "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\NetBanking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
-              "projectPath": "C:\\Users\\Eleikel\\Desktop\\ITLA\\Programacion III\\NetBanking\\Internet_banking\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
+            "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Charlie\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj": {
+              "projectPath": "C:\\Users\\Franklyn\\source\\repos\\InternetBaking_Versions\\Charlie\\Internet_banking.Core.Domain\\Internet_banking.Core.Domain.csproj"
             }
           }
         }
@@ -5900,7 +5900,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
