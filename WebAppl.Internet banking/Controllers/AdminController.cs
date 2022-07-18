@@ -51,6 +51,13 @@ namespace WebAppl.Internet_banking.Controllers
                 return View(vm);
             }
 
+            if (!ValidationModels.IsValid(vm.Username))
+            {
+                vm.HasError = true;
+               vm.Error = "No se puede crear usuarios con caracteres especiales.";
+                return View(vm);
+            }
+
             var origin = Request.Headers["origin"];
             RegisterResponse response = await userService.RegisterAsync(vm, origin);
 
@@ -79,7 +86,12 @@ namespace WebAppl.Internet_banking.Controllers
             {
                 return View("CreateAdmin", vm);
             }
-
+            if (!ValidationModels.IsValid(vm.Username))
+            {
+                vm.HasError = true;
+                vm.Error = "No se puede crear usuarios con caracteres especiales.";
+                return View("CreateAdmin", vm);
+            }
             RegisterResponse response = await userService.UpdateUserAsync(vm);
 
             if (response.HasError)
@@ -102,7 +114,12 @@ namespace WebAppl.Internet_banking.Controllers
             {
                 return View(vm);
             }
-
+            if (!ValidationModels.IsValid(vm.Username))
+            {
+                vm.HasError = true;
+                vm.Error = "No se puede crear usuarios con caracteres especiales.";
+                return View(vm);
+            }
             var origin = Request.Headers["origin"];
 
             RegisterResponse response = await userService.RegisterAsync(vm, origin);
@@ -161,7 +178,12 @@ namespace WebAppl.Internet_banking.Controllers
             {
                 return View("CreateClient", vm);
             }
-
+            if (!ValidationModels.IsValid(vm.Username))
+            {
+                vm.HasError = true;
+                vm.Error = "No se puede crear usuarios con caracteres especiales.";
+                return View("CreateClient", vm);
+            }
             RegisterResponse response = await userService.UpdateUserAsync(vm);
 
             if (response.HasError)

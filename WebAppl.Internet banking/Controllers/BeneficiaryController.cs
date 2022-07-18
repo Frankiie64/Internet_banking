@@ -25,10 +25,7 @@ namespace WebAppl.Internet_banking.Controllers
         }
 
 
-        //public Task<IActionResult> Index()
-        //{
-        //    return View();
-        //}
+    
 
         public IActionResult Beneficiarios()
         {
