@@ -40,7 +40,7 @@ namespace WebAppl.Internet_banking.Controllers
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> IndexAdmin()
         {
-            var items = await service.GetByDateTrasations();
+            var items = await service.GetTransationalToday();
             return View("IndexAdmin",items);
         }
 

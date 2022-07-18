@@ -50,7 +50,6 @@ C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Domain\bin\Debug\net5.0\Internet_banking.Core.Domain.dll
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Domain\bin\Debug\net5.0\ref\Internet_banking.Core.Domain.dll
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Domain\bin\Debug\net5.0\Internet_banking.Core.Domain.pdb
-C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Domain\obj\Debug\net5.0\Internet_banking.Core.Domain.csproj.AssemblyReference.cache
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Domain\obj\Debug\net5.0\Internet_banking.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Domain\obj\Debug\net5.0\Internet_banking.Core.Domain.AssemblyInfoInputs.cache
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Core.Domain\obj\Debug\net5.0\Internet_banking.Core.Domain.AssemblyInfo.cs

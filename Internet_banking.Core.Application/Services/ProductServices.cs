@@ -153,7 +153,14 @@ namespace Internet_banking.Core.Application.Services
             }
             return code;
         }
+        public async Task<SaveProductVM> GetProductByCode(int code)
+        {
+            var list = mapper.Map<List<SaveProductVM>>(await repo.GetAllAsync());
+            var item = list.Where(pr => pr.Code == code).SingleOrDefault();
+            return item;
+        }
 
+     
     }
 }
 
