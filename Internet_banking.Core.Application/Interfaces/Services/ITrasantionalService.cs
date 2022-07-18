@@ -10,6 +10,7 @@ namespace Internet_banking.Core.Application.Interfaces.Services
 {
     public interface ITrasantionalService : IGenericServices<SaveTransationalVM, TransationalVM, Transactional>
     {
-        Task<TransationalVM> GetByDateTrasations();
+        Task<SaveTransationalVM> GetByDateTrasations();
+        Task<TransationalVM> GetTransationalToday();
     }
 }

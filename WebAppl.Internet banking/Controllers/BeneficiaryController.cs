@@ -23,11 +23,7 @@ namespace WebAppl.Internet_banking.Controllers
             _context = context;
             user = context.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
-
-
-    
-
-        public IActionResult Beneficiarios()
+        public IActionResult Index()
         {
             return View("Beneficiarios");
         }
