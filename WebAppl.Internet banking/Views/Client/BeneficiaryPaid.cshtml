@@ -1,5 +1,34 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using Internet_banking.Core.Application.ViewModels.Clients.Paids;
+@model BeneficaryPaid;
+
+
+<div class="container mt-4 text-center">
+    @if (Model.HasError)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p>@Model.Error</p>
+            <br />
+            <a type="button" class="btn btn-sm btn-warning" asp-controller="Client" asp-action="Paid">Volver a pagos</a>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    else
+    {
+    <div class="card">
+        <div class="card-header">
+            Confirmacion de pago
+        </div>
+        <div class="card-body">
+            <form method="post" class="" asp-controller="Client" asp-action="BeneficiaryPaidPost" >
+                <h5 class="card-title">Informaciones de la transferencia en curso</h5>
+                <p class="card-text">
+                    El siguiente deposito se esta realizando a @Model.Firstname @Model.Lastname, mediante la cuenta
+                    @Model.AccountBeneficiary.Code, esta recibiendo un total de @Model.Amount.
+                </p>
+                <button type="submit" class="btn btn-primary">Confirmar Pago</button>
+                <a type="button" asp-controller="Home" asp-action="Index" class="btn btn-danger">Cancelar</a>
+            </form>
+        </div>
+    </div>
+    }
+</div>

@@ -35,11 +35,13 @@ namespace WebAppl.Internet_banking.Controllers
         [ServiceFilter(typeof(SelectHome))]
         public IActionResult Index()
         {
+         
             return View();
         }
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> IndexAdmin()
         {
+           
             var items = await service.GetTransationalToday();
             return View("IndexAdmin",items);
         }
@@ -47,6 +49,7 @@ namespace WebAppl.Internet_banking.Controllers
         [Authorize(Roles ="Basic")]
         public async Task<IActionResult> IndexClient()
         {
+         
             var item = await Productservice.GetAllWithIncludeAsync();
             item = item.Where(pr => pr.IdClient == user.Id).ToList();
             return View("IndexClient",item);
