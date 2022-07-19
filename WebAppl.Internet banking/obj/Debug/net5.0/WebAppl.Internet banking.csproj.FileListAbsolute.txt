@@ -2779,3 +2779,4 @@ C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\WebAp
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiary\Delete.cshtml.g.cs
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Beneficiary\Index.cshtml.g.cs
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Client\Transferencia.cshtml.g.cs
+C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\WebAppl.Internet banking\obj\Debug\net5.0\Razor\Views\Client\Paid.cshtml.g.cs
