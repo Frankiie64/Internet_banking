@@ -1,0 +1,64 @@
+﻿@using Internet_banking.Core.Application.ViewModels.Money_Advance;
+@model SaveAccountMoneyVM;
+
+@{
+    ViewData["Title"] = "Avance de dinero";
+}
+
+<div class="container mt-5 ">
+    @if (Model.HasError)
+    {
+        @if (Model.IdSaveAccount == 0)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <p>@Model.Error</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <p>@Model.Error</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+    }
+    <form method="post" asp-controller="client" asp-action="Transferencia" class=" m-2 p-4 form-control shadow border-1 border-dark">
+        <h4 class="fw-bolder">Realizar tranferencia</h4>
+        <div class="row d-flex">
+            <div class="col-4">
+                <div class="form-group">
+                    <select asp-for="IdSaveAccount" value="@Model.IdSaveAccount" asp-items="@(new SelectList(ViewBag.SaveAccounts, "Id", "Code"))" class="form-select">
+                        <option value="0">Seleccione su cuenta de origen</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="IdSaveAccount"></span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="CodeSaveAccount" class="form-label">Cuenta de destino: </label>
+                    <input asp-for="CodeSaveAccount" value="@Model.CodeSaveAccount" min="0" class="input-group-sm" />
+                    <span class="text-danger" asp-validation-for="CodeSaveAccount"></span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Amount" class="form-label">Transferencia: </label>
+                    <input asp-for="Amount" type="number" step="any" value="@Model.Amount" min="0" class="input-group-sm" />
+                    <span class="text-danger" asp-validation-for="Amount"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex mt-2 ">
+            <div class="col-12 align-content-end">
+                <div class="form-group text-end me-5">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        Realizar transferencia
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

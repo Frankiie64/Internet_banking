@@ -143,5 +143,124 @@ namespace WebAppl.Internet_banking.Controllers
             vm.Error = "La operacion se ha ejecutado de manera sactifactoria, favor revisar ambas cuentas.";
             return View("SaveMoney", vm);
         }
+
+        public async Task<IActionResult> Transferencia()
+        {
+            var items = await ProductService.GetAllViewModelAsync();
+            items = items.Where(client => client.IdClient == user.Id).ToList();
+
+            ViewBag.SaveAccounts = items.Where(client =>
+            client.IdAccount == (int)TypesAccountEnum.Cuentadeahorro || 
+            client.IdAccount == (int)TypesAccountEnum.CuentaPrincipal).ToList();
+
+            return View("Transferencia", new SaveAccountMoneyVM() { HasError = false });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Transferencia(SaveAccountMoneyVM vm)
+        {
+            vm.HasError = false;
+            var items = await ProductService.GetAllViewModelAsync();
+            items = items.Where(client => client.IdClient == user.Id).ToList();
+
+            ViewBag.SaveAccounts = items.Where(client =>
+            client.IdAccount == (int)TypesAccountEnum.Cuentadeahorro ||
+            client.IdAccount == (int)TypesAccountEnum.CuentaPrincipal).ToList();
+
+            if (!ModelState.IsValid)
+            {
+                return View("Transferencia", vm);
+            }
+
+            var SaveAccount = await ProductService.GetByIdSaveViewModelAsync(vm.IdSaveAccount);
+
+            if ((SaveAccount.Amount  - vm.Amount) < 0)
+            {
+                vm.HasError = true;
+                vm.Error = "No posee suficiente dinero en la cuenta de credito para realizar dicha tranferencia.";
+                return View("Transferencia", vm);
+            }
+
+            var Destination = await ProductService.GetProductByCode(vm.CodeSaveAccount);
+
+            if (Destination == null)
+            {
+                vm.HasError = true;
+                vm.Error = "La cuenta de ahorro no existe.";
+                return View("Transferencia", vm);
+            }
+            if (SaveAccount.IdAccount != (int)TypesAccountEnum.Cuentadeahorro && SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
+            {
+                vm.HasError = true;
+                vm.Error = "Solo esta permito cuentas de ahorros.";
+                return View("Transferencia", vm);
+            }
+
+            SaveAccount.Amount -=  vm.Amount;
+            bool value = await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+            if (!value)
+            {
+                vm.HasError = true;
+                vm.Error = "Ha ocurrido un error intentando hacer la transferencia en la cuenta de origen, por favor llamar al servicio tecnico.";
+                return View("Transferencia", vm);
+            }
+
+            Destination.Amount += vm.Amount;
+            value = await ProductService.UpdateAsync(Destination, Destination.Id);
+
+            if (!value)
+            {
+                SaveAccount.Amount += vm.Amount;
+                vm.HasError = true;
+                vm.Error = "Ha ocurrido un error intentando hacer el deposito en la cuenta de ahorro, por favor llamar al servicio tecnico y revisar que su no se haya debitado el monto de la tarjeta de credito.";
+                return View("Transferencia", vm);
+            }
+
+
+            var trasantion = await TrasantationService.GetByDateTrasations();
+
+            if (trasantion == null)
+            {
+
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                Destination.Amount -= vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, SaveAccount.Id);
+
+                vm.HasError = true;
+                vm.Error = "Ha ocurrido un error interno, por favor llamar al servicio tecnico .";
+                return View("Transferencia", vm);
+            }
+
+            trasantion.Count_transactional += 1;
+
+            value = await TrasantationService.UpdateAsync(trasantion, trasantion.Id);
+
+            if (!value)
+            {
+
+                Destination.Amount -= vm.Amount;
+                await ProductService.UpdateAsync(Destination, vm.IdSaveAccount);
+
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = "Ha ocurrido un error interno, por favor llamar al servicio tecnico .";
+                return View("Transferencia", vm);
+            }
+
+            vm = new();
+            vm.IdSaveAccount = 0;
+            vm.CodeSaveAccount = 0;
+            vm.Amount = 0;
+            vm.HasError = true;
+            vm.Error = "La operacion se ha ejecutado de manera sactifactoria, favor revisar ambas cuentas.";
+            return View("Transferencia", vm);
+        }
+
+
     }
 }
