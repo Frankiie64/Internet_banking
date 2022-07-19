@@ -2,15 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\Internet_banking.Core.Application",
+    "\\Internet_banking.Core.Application\\Interfaces",
+    "\\Internet_banking.Core.Application\\Interfaces\\Services",
+    "\\Internet_banking.Core.Application\\Services",
     "\\Internet_banking.Core.Application\\ViewModels",
-    "\\Internet_banking.Core.Application\\ViewModels\\Products",
-    "\\Internet_banking.Core.Application\\ViewModels\\Transational",
-    "\\Internet_banking.Core.Application\\ViewModels\\TypeAccount",
+    "\\Internet_banking.Core.Application\\ViewModels\\Money Advance",
+    "\\Internet_banking.Infrastructure.Identity",
+    "\\Internet_banking.Infrastructure.Identity\\Seeds",
     "\\WebAppl.Internet banking",
-    "\\WebAppl.Internet banking\\Views",
-    "\\WebAppl.Internet banking\\Views\\Client",
-    "\\WebAppl.Internet banking\\Views\\User"
+    "\\WebAppl.Internet banking\\Controllers"
   ],
-  "SelectedNode": "\\WebAppl.Internet banking\\Views\\Client\\SaveMoney.cshtml",
+  "SelectedNode": "\\Internet_banking.Core.Application\\Interfaces\\Services\\IProductServices.cs",
   "PreviewInSolutionExplorer": false
 }

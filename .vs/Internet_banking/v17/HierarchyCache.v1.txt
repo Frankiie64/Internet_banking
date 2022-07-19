@@ -1,0 +1,646 @@
+﻿++Solución "Internet_banking" ‎(6 de 6 proyectos)
+i:{00000000-0000-0000-0000-000000000000}:Internet_banking.sln
+++Src
+i:{00000000-0000-0000-0000-000000000000}:Src
+++Infrastructure
+i:{9de508fc-8b1e-4cb8-aa01-50b9bc9ff1f6}:Infrastructure
+++Internet_banking.Infrastructure.Persistence
+i:{f4000c15-25cc-491a-98d0-29d44582c90c}:Internet_banking.Infrastructure.Persistence
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\internet_banking.infrastructure.persistence.csproj
+++Dependencias
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:>1258
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:>1257
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>1405
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:>1256
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>1255
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:>2072
+++Context
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\context\
+++Migrations
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\
+++Repositories
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\repositories\
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\repositories\
+++ServicesRegistration.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\servicesregistration.cs
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.shared\servicesregistration.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\servicesregistration.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\servicesregistration.cs
+++Analizadores
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:analizadores
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:analizadores
+i:{47437180-efb0-4d9f-be44-b022005e8539}:analizadores
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:analizadores
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:analizadores
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:analizadores
+++Marcos de trabajo
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:marcos de trabajo
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:marcos de trabajo
+i:{47437180-efb0-4d9f-be44-b022005e8539}:marcos de trabajo
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:marcos de trabajo
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:marcos de trabajo
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:marcos de trabajo
+++Paquetes
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:paquetes
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:paquetes
+i:{47437180-efb0-4d9f-be44-b022005e8539}:paquetes
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:paquetes
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:paquetes
+++Proyectos
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:proyectos
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:proyectos
+i:{47437180-efb0-4d9f-be44-b022005e8539}:proyectos
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:proyectos
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:proyectos
+++ApplicationDbContext.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\context\applicationdbcontext.cs
+++20220712153511_InitialMigration.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220712153511_initialmigration.cs
+++20220712175641_FixedNameOfElemementOntheTableTypeAccount.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220712175641_fixednameofelemementonthetabletypeaccount.cs
+++20220713133109_ChangesOnTableTypeAccount.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220713133109_changesontabletypeaccount.cs
+++20220716002047_Add Code for the table product.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716002047_add code for the table product.cs
+++20220716155607_Add Paid.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716155607_add paid.cs
+++20220716195123_BenefiaryTable.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716195123_benefiarytable.cs
+++20220716231535_TableTransactional.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716231535_tabletransactional.cs
+++20220717015505_AddDateOfTableTrasational.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220717015505_adddateoftabletrasational.cs
+++20220717030105_DeleteElementsOfTableTrasational.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220717030105_deleteelementsoftabletrasational.cs
+++ApplicationDbContextModelSnapshot.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\applicationdbcontextmodelsnapshot.cs
+++BeneficiaryRepository.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\repositories\beneficiaryrepository.cs
+++GenericRepository.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\repositories\genericrepository.cs
+++ProductRepository.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\repositories\productrepository.cs
+++TransactionRepository.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\repositories\transactionrepository.cs
+++TypeAccountRepository.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\repositories\typeaccountrepository.cs
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.17\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\users\eleikel\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.17\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.17\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.17\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.17\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.NETCore.App
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\microsoft.netcore.app
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.shared\microsoft.netcore.app
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\microsoft.netcore.app
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\microsoft.netcore.app
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\microsoft.netcore.app
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\microsoft.netcore.app
+++Microsoft.EntityFrameworkCore.InMemory (5.0.17)
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:>2151
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2107
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2093
+++Microsoft.EntityFrameworkCore.SqlServer (5.0.17)
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:>2149
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2102
+++Microsoft.Extensions.Options.ConfigurationExtensions (5.0.0)
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:>2150
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:>2119
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2089
+++Internet_banking.Core.Application
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\internet_banking.core.application.csproj
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\internet_banking.core.application.csproj
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\internet_banking.core.application.csproj
+i:{b20a0c24-3d7b-4f89-9c04-18eef587ee97}:Internet_banking.Core.Application
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\internet_banking.core.application.csproj
+++Internet_banking.Core.Domain
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\internet_banking.core.domain.csproj
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\internet_banking.core.domain.csproj
+i:{b20a0c24-3d7b-4f89-9c04-18eef587ee97}:Internet_banking.Core.Domain
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\internet_banking.core.domain.csproj
+++20220712153511_InitialMigration.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220712153511_initialmigration.designer.cs
+++20220712175641_FixedNameOfElemementOntheTableTypeAccount.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220712175641_fixednameofelemementonthetabletypeaccount.designer.cs
+++20220713133109_ChangesOnTableTypeAccount.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220713133109_changesontabletypeaccount.designer.cs
+++20220716002047_Add Code for the table product.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716002047_add code for the table product.designer.cs
+++20220716155607_Add Paid.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716155607_add paid.designer.cs
+++20220716195123_BenefiaryTable.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716195123_benefiarytable.designer.cs
+++20220716231535_TableTransactional.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220716231535_tabletransactional.designer.cs
+++20220717015505_AddDateOfTableTrasational.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220717015505_adddateoftabletrasational.designer.cs
+++20220717030105_DeleteElementsOfTableTrasational.Designer.cs
+i:{ea05110a-3372-40e6-b3b7-9de24f04cc70}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.persistence\migrations\20220717030105_deleteelementsoftabletrasational.designer.cs
+++Internet_banking.Infrastructure.Shared
+i:{f4000c15-25cc-491a-98d0-29d44582c90c}:Internet_banking.Infrastructure.Shared
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.shared\internet_banking.infrastructure.shared.csproj
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.shared\internet_banking.infrastructure.shared.csproj
+++Services
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.shared\services\
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\services\
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\services\
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\
+++EmailService.cs
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.shared\services\emailservice.cs
+++MailKit (3.3.0)
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:>2121
+++MimeKit (3.3.0)
+i:{c718121c-d382-444b-9c8a-06f4618a291a}:>2120
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2109
+++Internet_banking.Infrastructure.Identity
+i:{f4000c15-25cc-491a-98d0-29d44582c90c}:Internet_banking.Infrastructure.Identity
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\internet_banking.infrastructure.identity.csproj
+++Contexts
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\contexts\
+++Entities
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\entities\
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\entities\
+++Seeds
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\seeds\
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\seeds\
+++IdentityContext.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\contexts\identitycontext.cs
+++ApplicationUser.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\entities\applicationuser.cs
+++20220710150314_FirstMigration.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220710150314_firstmigration.cs
+++20220713141241_SolutionProblemWithStarProgram.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220713141241_solutionproblemwithstarprogram.cs
+++20220713142913_PrimeraMigracionIdentity.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220713142913_primeramigracionidentity.cs
+++20220715004920_AddIsActive.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220715004920_addisactive.cs
+++IdentityContextModelSnapshot.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\identitycontextmodelsnapshot.cs
+++DefaultAdminUser.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\seeds\defaultadminuser.cs
+++DefaultBasicUser.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\seeds\defaultbasicuser.cs
+++DefaultRoles.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\seeds\defaultroles.cs
+++DefaultSuperAdminUser.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\seeds\defaultsuperadminuser.cs
+++AccountServices.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\services\accountservices.cs
+++Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (5.0.17)
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2103
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (5.0.17)
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2105
+++Microsoft.EntityFrameworkCore.Tools (5.0.17)
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2108
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:>2136
+++Microsoft.Extensions.DependencyInjection (5.0.2)
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2106
+++Microsoft.Extensions.Options.ConfigurationExtensions (6.0.0)
+i:{47437180-efb0-4d9f-be44-b022005e8539}:>2104
+++20220710150314_FirstMigration.Designer.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220710150314_firstmigration.designer.cs
+++20220713141241_SolutionProblemWithStarProgram.Designer.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220713141241_solutionproblemwithstarprogram.designer.cs
+++20220713142913_PrimeraMigracionIdentity.Designer.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220713142913_primeramigracionidentity.designer.cs
+++20220715004920_AddIsActive.Designer.cs
+i:{47437180-efb0-4d9f-be44-b022005e8539}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.infrastructure.identity\migrations\20220715004920_addisactive.designer.cs
+++Core
+i:{9de508fc-8b1e-4cb8-aa01-50b9bc9ff1f6}:Core
+++Common
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\common\
+++Beneficiary.cs
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\entities\beneficiary.cs
+++Products.cs
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\entities\products.cs
+++Transactional.cs
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\entities\transactional.cs
+++TypeAccount.cs
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\entities\typeaccount.cs
+++Settings
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\settings\
+++AuditableBaseEntity.cs
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\common\auditablebaseentity.cs
+++MailSettings.cs
+i:{9efc32fc-d30c-4fd3-91bb-117cb354e2df}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.domain\settings\mailsettings.cs
+++Dtos
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\
+++Enums
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\enums\
+++helper
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\helper\
+++Interfaces
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\
+++Mappings
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\mappings\
+++ViewModels
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\
+++Account
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\
+++Email
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\email\
+++Product
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\product\
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\product\
+++Roles.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\enums\roles.cs
+++TypesAccount.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\enums\typesaccount.cs
+++SesionSerialize.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\helper\sesionserialize.cs
+++SingletonRepository.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\helper\singletonrepository.cs
+++GeneralProfile.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\mappings\generalprofile.cs
+++DefaultCreditCard.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\seeds\defaultcreditcard.cs
+++DefaultDebt.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\seeds\defaultdebt.cs
+++DefaultPrincipalAccount.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\seeds\defaultprincipalaccount.cs
+++DefaultSavingAccount.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\seeds\defaultsavingaccount.cs
+++DefaultTransantionsTable.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\seeds\defaulttransantionstable.cs
+++BeneficiaryServices.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\services\beneficiaryservices.cs
+++GenericServices.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\services\genericservices.cs
+++ProductServices.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\services\productservices.cs
+++TrasantionalService.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\services\trasantionalservice.cs
+++TypeAccountService.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\services\typeaccountservice.cs
+++UserService.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\services\userservice.cs
+++Clients
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\clients\
+++Products
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\products\
+++Transational
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\transational\
+++TypeAccount
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\typeaccount\
+++Users
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\
+++AutoMapper (11.0.1)
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2091
+++AutoMapper.Extensions.Microsoft.DependencyInjection (11.0.0)
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2087
+++Microsoft.AspNetCore.Http (2.2.2)
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2092
+++Microsoft.AspNetCore.Http.Extensions (2.2.0)
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2090
+++Microsoft.EntityFrameworkCore (5.0.17)
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2086
+++Newtonsoft.Json (13.0.1)
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:>2088
+++AuthenticationRequest.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\authenticationrequest.cs
+++AuthenticationResponse.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\authenticationresponse.cs
+++ForgotoPasswordResponse.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\forgotopasswordresponse.cs
+++ForgotPassowordRequest.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\forgotpassowordrequest.cs
+++RegisterRequest.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\registerrequest.cs
+++RegisterResponse.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\registerresponse.cs
+++ResetPassordRequest.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\resetpassordrequest.cs
+++ResetPasswordResponse.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\account\resetpasswordresponse.cs
+++EmailRequest.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\dtos\email\emailrequest.cs
+++IBeneficiaryRepository.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\repositories\ibeneficiaryrepository.cs
+++IGenericRepository.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\repositories\igenericrepository.cs
+++IProductRepository.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\repositories\iproductrepository.cs
+++ITransactionRepository.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\repositories\itransactionrepository.cs
+++ITypeAccountRepository.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\repositories\itypeaccountrepository.cs
+++IAccountServices.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\iaccountservices.cs
+++IBeneficiaryServices.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\ibeneficiaryservices.cs
+++IEmailService.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\iemailservice.cs
+++IGenericServices.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\igenericservices.cs
+++IProductServices.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\iproductservices.cs
+++ITrasantionalService.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\itrasantionalservice.cs
+++ITypeAccountService.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\itypeaccountservice.cs
+++IUserService.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\interfaces\services\iuserservice.cs
+++Beneficiary
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\clients\beneficiary\
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\beneficiary\
+++ProductsVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\products\productsvm.cs
+++SaveProductVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\products\saveproductvm.cs
+++SaveTransationalVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\transational\savetransationalvm.cs
+++TransationalVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\transational\transationalvm.cs
+++SaveTypeAccountVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\typeaccount\savetypeaccountvm.cs
+++TypeAccountVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\typeaccount\typeaccountvm.cs
+++Client
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\client\
+++ForgotPasswordVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\forgotpasswordvm.cs
+++LoginVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\loginvm.cs
+++ResetPasswordVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\resetpasswordvm.cs
+++SaveUserVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\saveuservm.cs
+++UserVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\uservm.cs
+++BeneficiaryVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\clients\beneficiary\beneficiaryvm.cs
+++SaveBeneficiaryVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\clients\beneficiary\savebeneficiaryvm.cs
+++SaveClienteVM.cs
+i:{27cfb81f-e219-442f-94f3-dc9110fc1986}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\internet_banking.core.application\viewmodels\users\client\saveclientevm.cs
+++WebApp
+i:{9de508fc-8b1e-4cb8-aa01-50b9bc9ff1f6}:WebApp
+++WebAppl.Internet banking
+i:{2c78cb6a-fc82-459d-a9bf-d8dd1eaed06f}:WebAppl.Internet banking
+++Connected Services 
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:>2073
+++Properties
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\properties\
+++wwwroot
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\
+++Controllers
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\controllers\
+++AdminController.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\controllers\admincontroller.cs
+++BeneficiaryController.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\controllers\beneficiarycontroller.cs
+++HomeController.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\controllers\homecontroller.cs
+++ProductController.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\controllers\productcontroller.cs
+++UserController.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\controllers\usercontroller.cs
+++middlewares
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\middlewares\
+++Models
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\models\
+++Views
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\
+++Admin
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\admin\
+++CreateBeneficiarios.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\beneficiary\createbeneficiarios.cshtml
+++Index.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\beneficiary\index.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\home\index.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\admin\index.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\product\index.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\user\index.cshtml
+++Home
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\home\
+++IndexAdmin.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\home\indexadmin.cshtml
+++IndexClient.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\home\indexclient.cshtml
+++Shared
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\shared\
+++User
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\user\
+++_ViewImports.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\_viewimports.cshtml
+++_ViewStart.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\_viewstart.cshtml
+++Beneficiarios.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\beneficiarios.cshtml
+++appsettings.json
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\appsettings.json
+++Program.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\program.cs
+++Startup.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\startup.cs
+++No se detectaron dependencias de servicio
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:>2074
+++launchSettings.json
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\properties\launchsettings.json
+++css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\css\
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\
+++js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\js\
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\
+++lib
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\
+++favicon.ico
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\favicon.ico
+++LoginAuthorize.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\middlewares\loginauthorize.cs
+++SelectHome.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\middlewares\selecthome.cs
+++ValidSession.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\middlewares\validsession.cs
+++ErrorViewModel.cs
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\models\errorviewmodel.cs
+++CreateAdmin.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\admin\createadmin.cshtml
+++CreateClient.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\admin\createclient.cshtml
+++AddProduct.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\product\addproduct.cshtml
+++Error.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\product\error.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\shared\error.cshtml
+++SeeProduct.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\product\seeproduct.cshtml
+++_Layout.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\shared\_layout.cshtml
+++_ValidationScriptsPartial.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\shared\_validationscriptspartial.cshtml
+++AccessDenied.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\user\accessdenied.cshtml
+++ConfirmEmail.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\user\confirmemail.cshtml
+++ForgotPassword.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\user\forgotpassword.cshtml
+++Register.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\user\register.cshtml
+++ResetPassword.cshtml
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\views\user\resetpassword.cshtml
+++appsettings.Development.json
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\program files\dotnet\sdk\6.0.201\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.CodeAnalysis.Analyzers
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0\analyzers\dotnet\cs\microsoft.codeanalysis.analyzers.dll
+++Microsoft.CodeAnalysis.CSharp.Analyzers
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\.nuget\packages\microsoft.codeanalysis.analyzers\3.0.0\analyzers\dotnet\cs\microsoft.codeanalysis.csharp.analyzers.dll
+++Microsoft.AspNetCore.App
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\microsoft.aspnetcore.app
+++Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation (5.0.13)
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:>2135
+++Microsoft.VisualStudio.Web.CodeGeneration.Design (5.0.2)
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:>2137
+++site.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\css\site.css
+++site.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\js\site.js
+++bootstrap
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\
+++jquery
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery\
+++jquery-validation
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation\
+++jquery-validation-unobtrusive
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation-unobtrusive\
+++dist
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery\dist\
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation\dist\
+++LICENSE
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\license
+++LICENSE.txt
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery\license.txt
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation-unobtrusive\license.txt
+++LICENSE.md
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation\license.md
+++jquery.validate.unobtrusive.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+++jquery.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery\dist\jquery.js
+++additional-methods.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation\dist\additional-methods.js
+++jquery.validate.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+++jquery.validate.unobtrusive.min.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+++bootstrap.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+++bootstrap-grid.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+++bootstrap-reboot.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+++bootstrap-utilities.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+++bootstrap.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+++jquery.min.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery\dist\jquery.min.js
+++additional-methods.min.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+++jquery.validate.min.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+++bootstrap.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+++bootstrap.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+++bootstrap.rtl.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+++bootstrap-grid.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+++bootstrap-grid.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+++bootstrap-grid.rtl.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+++bootstrap-reboot.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+++bootstrap-reboot.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+++bootstrap-reboot.rtl.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+++bootstrap-utilities.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+++bootstrap-utilities.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+++bootstrap-utilities.rtl.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+++bootstrap.bundle.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+++bootstrap.esm.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+++bootstrap.js.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+++bootstrap.min.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+++jquery.min.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\jquery\dist\jquery.min.map
+++bootstrap.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+++bootstrap.rtl.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+++bootstrap.rtl.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+++bootstrap-grid.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+++bootstrap-grid.rtl.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+++bootstrap-grid.rtl.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+++bootstrap-reboot.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+++bootstrap-reboot.rtl.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+++bootstrap-reboot.rtl.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+++bootstrap-utilities.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+++bootstrap-utilities.rtl.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+++bootstrap-utilities.rtl.min.css
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+++bootstrap.bundle.js.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+++bootstrap.bundle.min.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+++bootstrap.esm.js.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+++bootstrap.esm.min.js
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+++bootstrap.min.js.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+++bootstrap.rtl.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+++bootstrap-grid.rtl.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+++bootstrap-reboot.rtl.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+++bootstrap-utilities.rtl.min.css.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+++bootstrap.bundle.min.js.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+++bootstrap.esm.min.js.map
+i:{638ff5b1-9da7-48b8-9c2b-f561f2daee15}:c:\users\eleikel\desktop\itla\programacion iii\netbanking\internet_banking\webappl.internet banking\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map

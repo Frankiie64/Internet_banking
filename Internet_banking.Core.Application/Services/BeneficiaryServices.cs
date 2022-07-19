@@ -44,5 +44,11 @@ namespace Internet_banking.Core.Application.Services
             return list;
         }
 
+        public async Task<SaveBeneficiaryVM> GetByIdSAsync(int id)
+        {
+            Beneficiary entity = await repo.GetByIdAsync(id);
+            SaveBeneficiaryVM vm = mapper.Map<SaveBeneficiaryVM>(entity);
+            return vm;
+        }
     }
 }

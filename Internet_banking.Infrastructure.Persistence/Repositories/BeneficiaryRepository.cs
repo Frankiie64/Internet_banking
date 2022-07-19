@@ -17,5 +17,12 @@ namespace Internet_banking.Infrastructure.Persistence.Repositories
         {
             this.db = db;
         }
+
+        public async Task<Beneficiary> GetByIdAsync(string id)
+        {
+            return await db.Set<Beneficiary>().FindAsync(id);
+        }
+
+
     }
 }

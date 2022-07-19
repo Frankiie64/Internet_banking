@@ -97,6 +97,26 @@ namespace Internet_banking.Core.Application.Services
             return vm;
         }
 
+        public async Task<bool> Exist(int code)
+        {
+            return await repo.ExistAync(code);
+
+        }
+
+        public async Task<SaveProductVM> GetByIdSAsync(string id)
+        {
+            var entity = await repo.GetByIdAsync(id);
+            SaveProductVM vm = mapper.Map<SaveProductVM>(entity);
+            return vm;
+        }
+
+        //public async Task<SaveUserVM> GetSaveUserVMByIdAsync(string id)
+        //{
+        //    var item = mapper.Map<SaveUserVM>(await accountServices.GetUserByIdAsync(id));
+        //    return item;
+        //}
+
+
         public async Task<List<ProductsVM>> GetAllWithIncludeAsync()
         {
             var users = await _userService.GetAllUsersAsync();

@@ -18,5 +18,7 @@ namespace Internet_banking.Core.Application.ViewModels.Clients.Beneficiary
         public int BeneficiaryCode { get; set; }
         public ProductsVM Beneficiary { get; set; }
 
+
+
     }
 }

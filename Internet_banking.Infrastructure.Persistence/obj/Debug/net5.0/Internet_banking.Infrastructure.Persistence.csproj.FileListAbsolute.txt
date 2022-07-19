@@ -83,3 +83,20 @@ C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.dll
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\ref\Internet_banking.Infrastructure.Persistence.dll
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Infrastructure.Persistence.deps.json
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Infrastructure.Persistence.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Infrastructure.Persistence.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Application.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Domain.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Application.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\bin\Debug\net5.0\Internet_banking.Core.Domain.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.csproj.AssemblyReference.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.AssemblyInfoInputs.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.AssemblyInfo.cs
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.csproj.CopyComplete
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\refint\Internet_banking.Infrastructure.Persistence.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\Internet_banking.Infrastructure.Persistence.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\NetBanking\Internet_banking\Internet_banking.Infrastructure.Persistence\obj\Debug\net5.0\ref\Internet_banking.Infrastructure.Persistence.dll
