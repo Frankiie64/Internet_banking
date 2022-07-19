@@ -1,5 +1,15 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using Internet_banking.Core.Application.ViewModels.Clients.Paids;
+@model DeubsPaids;
+
+
+<div class="container mt-4 text-center">
+    @if (Model.HasError)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p>@Model.Error</p>
+            <br />
+            <a type="button" class="btn btn-sm btn-warning" asp-controller="Client" asp-action="Paid">Volver a pagos</a>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+</div>
