@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Internet_banking.Core.Application.ViewModels.Money_Advance;
+using Internet_banking.Core.Application.ViewModels.Clients.Paids;
 
 namespace WebAppl.Internet_banking.Controllers
 {
@@ -304,9 +305,99 @@ namespace WebAppl.Internet_banking.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> DuebPaid()
+        public async Task<IActionResult> DuebPaid(DeubsPaids vm)
         {
-            return View();
+            vm.HasError = false;
+
+            if (!ModelState.IsValid)
+            {
+                vm.HasError = true;
+                vm.Error = "Por favor rellenar todos los campos, de manera que se espera.";
+                return View(vm);
+            }
+
+            var SaveAccount = await ProductService.GetByIdSaveViewModelAsync(vm.IdSaveAccount);
+
+            if ((SaveAccount.Amount - vm.Amount) < 0)
+            {
+                vm.HasError = true;
+                vm.Error = "No posee suficiente balance para realizar esta pago";
+                return View(vm);
+            }
+
+            var deubs = await ProductService.GetByIdSaveViewModelAsync(vm.IdDeubs);
+
+            if ((deubs.Amount - deubs.Paid) == 0)
+            {
+                vm.HasError = true;
+                vm.Error = $"Esta prestamo fue completado, si desea otro por favor pongase en contacto con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            if ((deubs.Amount - deubs.Paid) - vm.Amount < 0)
+            {
+                vm.HasError = true;
+                vm.Error = $"La cantidad exacta a pagar es de {deubs.Amount - deubs.Paid}, favor intentar de nuevo con este mismo monto.";
+                return View(vm);
+            }
+
+            SaveAccount.Amount -= vm.Amount;
+
+            bool value = await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+            if (!value)
+            {
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno cuando se estaba realizando la transferencia de cuenta a prestammo, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            deubs.Paid += vm.Amount;
+
+             value = await ProductService.UpdateAsync(deubs, vm.IdDeubs);
+
+            if (!value)
+            {
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno, cuando se estaba debitando el prestamo, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            var trasantion = await TrasantationService.GetByDateTrasations();
+
+            if (trasantion == null)
+            {
+                deubs.Paid -= vm.Amount;
+                await ProductService.UpdateAsync(deubs, vm.IdDeubs);
+
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            trasantion.Paids += 1;
+
+            value = await TrasantationService.UpdateAsync(trasantion, trasantion.Id);
+
+            if (!value)
+            {
+                deubs.Paid -= vm.Amount;
+                await ProductService.UpdateAsync(deubs, vm.IdDeubs);
+
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
         public async Task<IActionResult> BeneficiaryPaid()
         {
