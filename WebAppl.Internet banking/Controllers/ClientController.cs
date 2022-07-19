@@ -19,15 +19,18 @@ namespace WebAppl.Internet_banking.Controllers
     {
         private readonly IProductServices ProductService;
         private readonly IUserService userService;
+        private readonly IBeneficiaryServices beneficiaryServices;
         private readonly ITrasantionalService TrasantationService;
         private readonly IHttpContextAccessor _context;
         AuthenticationResponse user;
 
-        public ClientController(IUserService userService, IHttpContextAccessor context, IProductServices ProductService, ITrasantionalService TrasantationService)
+        public ClientController(IUserService userService, IHttpContextAccessor context, IProductServices ProductService, ITrasantionalService TrasantationService
+            ,IBeneficiaryServices beneficiaryServices)
         {
             this.userService = userService;
             this.ProductService = ProductService;
             this.TrasantationService = TrasantationService;
+            this.beneficiaryServices = beneficiaryServices;
             _context = context;
             user = context.HttpContext.Session.Get<AuthenticationResponse>("user");
         }
@@ -172,6 +175,8 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Transferencia", vm);
             }
 
+
+
             var SaveAccount = await ProductService.GetByIdSaveViewModelAsync(vm.IdSaveAccount);
 
             if ((SaveAccount.Amount  - vm.Amount) < 0)
@@ -189,6 +194,13 @@ namespace WebAppl.Internet_banking.Controllers
                 vm.Error = "La cuenta de ahorro no existe.";
                 return View("Transferencia", vm);
             }
+            if (Destination == SaveAccount)
+            {
+                vm.HasError = true;
+                vm.Error = "No puedes transferir dinero a la misma cuenta de origen.";
+                return View("Transferencia", vm);
+            }
+
             if (SaveAccount.IdAccount != (int)TypesAccountEnum.Cuentadeahorro && SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
             {
                 vm.HasError = true;
@@ -259,6 +271,46 @@ namespace WebAppl.Internet_banking.Controllers
             vm.HasError = true;
             vm.Error = "La operacion se ha ejecutado de manera sactifactoria, favor revisar ambas cuentas.";
             return View("Transferencia", vm);
+        }
+
+        public async Task<IActionResult> Paid()
+        {
+            var produts = await ProductService.GetAllWithIncludeAsync();
+            produts = produts.Where(pr => pr.IdClient == user.Id).ToList();
+
+            var Benefeciaries = await beneficiaryServices.GetAllViewModelAsync();
+            Benefeciaries = Benefeciaries.Where(bn => bn.UserId == user.Id).ToList();
+
+            var SaveAccounts = produts.Where(Account => Account.IdAccount == (int)TypesAccountEnum.CuentaPrincipal
+            || (int)Account.IdAccount == (int)TypesAccountEnum.Cuentadeahorro).ToList();
+
+            var Dubs = produts.Where(Account => Account.IdAccount == (int)TypesAccountEnum.Prestamo);
+
+            var CreditCard = produts.Where(Account => Account.IdAccount == (int)TypesAccountEnum.Tarjetadecredito);
+
+            ViewBag.beneficiaries = Benefeciaries;
+            ViewBag.saveAccounts = SaveAccounts;
+            ViewBag.dubs = Dubs;
+            ViewBag.creditCard = CreditCard;
+
+            return View();
+        }
+
+        public async Task<IActionResult> ExpressPaid()
+        {
+            return View();
+        }
+        public async Task<IActionResult> CreditCardPaid()
+        {
+            return View();
+        }
+        public async Task<IActionResult> DuebPaid()
+        {
+            return View();
+        }
+        public async Task<IActionResult> BeneficiaryPaid()
+        {
+            return View();
         }
 
 
