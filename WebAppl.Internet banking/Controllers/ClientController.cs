@@ -1,4 +1,5 @@
 ﻿using Internet_banking.Core.Application.Dtos.Account;
+using Internet_banking.Core.Application.ViewModels.Products;
 using Internet_banking.Core.Application.helper;
 using Internet_banking.Core.Application.Interfaces.Services;
 using Internet_banking.Core.Application.Enums;
@@ -26,7 +27,7 @@ namespace WebAppl.Internet_banking.Controllers
         AuthenticationResponse user;
 
         public ClientController(IUserService userService, IHttpContextAccessor context, IProductServices ProductService, ITrasantionalService TrasantationService
-            ,IBeneficiaryServices beneficiaryServices)
+            , IBeneficiaryServices beneficiaryServices)
         {
             this.userService = userService;
             this.ProductService = ProductService;
@@ -38,11 +39,11 @@ namespace WebAppl.Internet_banking.Controllers
         public async Task<IActionResult> SaveMoney()
         {
             var items = await ProductService.GetAllViewModelAsync();
-            items = items.Where(client => client.IdClient == user.Id).ToList();          
+            items = items.Where(client => client.IdClient == user.Id).ToList();
 
             ViewBag.CreditCards = items.Where(client => client.IdAccount == (int)TypesAccountEnum.Tarjetadecredito).ToList();
 
-            return View("SaveMoney", new SaveMoneyVM() { HasError = false});
+            return View("SaveMoney", new SaveMoneyVM() { HasError = false });
         }
 
         [HttpPost]
@@ -56,16 +57,16 @@ namespace WebAppl.Internet_banking.Controllers
 
             if (!ModelState.IsValid)
             {
-                return View("SaveMoney",vm);                    
+                return View("SaveMoney", vm);
             }
 
             var CreditCard = await ProductService.GetByIdSaveViewModelAsync(vm.IdcreditCard);
 
-            if ((CreditCard.Amount - CreditCard.Paid)- (vm.Amount +(vm.Amount * 0.625)) < 0)
+            if ((CreditCard.Amount - CreditCard.Paid) - (vm.Amount + (vm.Amount * 0.0625)) < 0)
             {
                 vm.HasError = true;
                 vm.Error = "No posee suficiente dinero en la tarjeta de credito para realizar dicho avance de efectivo.";
-                return View("SaveMoney",vm);
+                return View("SaveMoney", vm);
             }
 
             var SaveAccount = await ProductService.GetProductByCode(vm.CodeSaveAccount);
@@ -123,7 +124,7 @@ namespace WebAppl.Internet_banking.Controllers
 
             trasantion.Count_transactional += 1;
 
-            value = await TrasantationService.UpdateAsync(trasantion,trasantion.Id);
+            value = await TrasantationService.UpdateAsync(trasantion, trasantion.Id);
 
             if (!value)
             {
@@ -154,7 +155,7 @@ namespace WebAppl.Internet_banking.Controllers
             items = items.Where(client => client.IdClient == user.Id).ToList();
 
             ViewBag.SaveAccounts = items.Where(client =>
-            client.IdAccount == (int)TypesAccountEnum.Cuentadeahorro || 
+            client.IdAccount == (int)TypesAccountEnum.Cuentadeahorro ||
             client.IdAccount == (int)TypesAccountEnum.CuentaPrincipal).ToList();
 
             return View("Transferencia", new SaveAccountMoneyVM() { HasError = false });
@@ -180,7 +181,7 @@ namespace WebAppl.Internet_banking.Controllers
 
             var SaveAccount = await ProductService.GetByIdSaveViewModelAsync(vm.IdSaveAccount);
 
-            if ((SaveAccount.Amount  - vm.Amount) < 0)
+            if ((SaveAccount.Amount - vm.Amount) < 0)
             {
                 vm.HasError = true;
                 vm.Error = "No posee suficiente dinero en la cuenta de credito para realizar dicha tranferencia.";
@@ -209,7 +210,7 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Transferencia", vm);
             }
 
-            SaveAccount.Amount -=  vm.Amount;
+            SaveAccount.Amount -= vm.Amount;
             bool value = await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
 
             if (!value)
@@ -444,7 +445,7 @@ namespace WebAppl.Internet_banking.Controllers
 
             deubs.Paid += vm.Amount;
 
-             value = await ProductService.UpdateAsync(deubs, vm.IdDeubs);
+            value = await ProductService.UpdateAsync(deubs, vm.IdDeubs);
 
             if (!value)
             {
@@ -489,11 +490,126 @@ namespace WebAppl.Internet_banking.Controllers
             }
             return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
-        public async Task<IActionResult> BeneficiaryPaid()
+        public async Task<IActionResult> BeneficiaryPaid(BeneficaryPaid vm)
         {
-            return View();
+            vm.HasError = false;
+
+            if (!ModelState.IsValid)
+            {
+                vm.HasError = true;
+                vm.Error = "Por favor rellenar todos los campos, de manera que se espera.";
+                return View(vm);
+            }
+
+            var SaveAccount = await ProductService.GetByIdSaveViewModelAsync(vm.IdSaveAccount);
+
+            if ((SaveAccount.Amount - vm.Amount) < 0)
+            {
+                vm.HasError = true;
+                vm.Error = "No posee suficiente balance para realizar esta pago";
+                return View(vm);
+            }
+
+            vm.Beneficiary = await beneficiaryServices.GetByIdSaveViewModelAsync(vm.IdBeneficiary);
+
+            if (vm.Beneficiary == null)
+            {
+                vm.HasError = true;
+                vm.Error = $"La persona que intenta depositar no tiene acceso a este proudcto por favor comuniquese con el/ella, y pregunte por otra de nuestras cuentas.";
+                return View(vm);
+            }
+
+            var products = await ProductService.GetAllWithIncludeAsync();
+
+            var AccountBeneficiaryVM  = products.Where(x => x.Code == vm.Beneficiary.BeneficiaryCode).SingleOrDefault();
+
+            vm.AccountBeneficiary = new SaveProductVM
+            {
+                Id = AccountBeneficiaryVM.Id,
+                Code = AccountBeneficiaryVM.Code,
+                IdAccount = AccountBeneficiaryVM.IdAccount,
+                Amount= AccountBeneficiaryVM.Amount,
+                IdClient = AccountBeneficiaryVM.IdClient,                
+                
+            };
+
+            vm.Firstname = AccountBeneficiaryVM.client.Firstname;
+            vm.Lastname= AccountBeneficiaryVM.client.Lastname;
+
+
+            vm.SaveAccount = SaveAccount;
+
+            SingletonRepository.Instance.Beneficary = vm;
+            return View(vm);
         }
+        [HttpPost]
+        public async Task<IActionResult> BeneficiaryPaidPost(BeneficaryPaid vm)
+        {
+            vm = SingletonRepository.Instance.Beneficary;
+
+            SingletonRepository.Instance.Beneficary = new();
+
+            vm.SaveAccount.Amount -= vm.Amount;
+
+            bool value = await ProductService.UpdateAsync(vm.SaveAccount, vm.IdSaveAccount);
+
+            if (!value)
+            {
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno cuando se estaba realizando la transferencia de cuenta origen a cuenta destino, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            vm.AccountBeneficiary.Amount += vm.Amount;
+
+            value = await ProductService.UpdateAsync(vm.AccountBeneficiary, vm.AccountBeneficiary.Id);
+
+            if (!value)
+            {
+                vm.SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(vm.SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno, cuando se estaba debitando a la cuenta destino, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            var trasantion = await TrasantationService.GetByDateTrasations();
+
+            if (trasantion == null)
+            {
+                vm.AccountBeneficiary.Amount -= vm.Amount;
+                await ProductService.UpdateAsync(vm.AccountBeneficiary, vm.AccountBeneficiary.Id);
+
+                vm.SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(vm.SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            trasantion.Paids += 1;
+
+            value = await TrasantationService.UpdateAsync(trasantion, trasantion.Id);
+
+            if (!value)
+            {
+                vm.AccountBeneficiary.Amount -= vm.Amount;
+                await ProductService.UpdateAsync(vm.AccountBeneficiary, vm.AccountBeneficiary.Id);
+
+                vm.SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(vm.SaveAccount, vm.IdSaveAccount);
 
 
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
+
+        }
     }
+
+
 }

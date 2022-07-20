@@ -1,4 +1,5 @@
-﻿using Internet_banking.Core.Application.ViewModels.Products;
+﻿using Internet_banking.Core.Application.ViewModels.Clients.Paids;
+using Internet_banking.Core.Application.ViewModels.Products;
 using Internet_banking.Core.Application.ViewModels.Users;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Internet_banking.Core.Application.helper
 
         public SaveUserVM client = new();
         public SaveProductVM Product = new();
+        public BeneficaryPaid Beneficary { get; set; }
         public string origin = string.Empty;
 
         private SingletonRepository()

@@ -1,4 +1,5 @@
 ﻿using Internet_banking.Core.Application.Dtos.Account;
+using Internet_banking.Core.Application.Enums;
 using Internet_banking.Core.Application.helper;
 using Internet_banking.Core.Application.Interfaces.Services;
 using Internet_banking.Core.Application.ViewModels.Clients.Beneficiary;
@@ -49,6 +50,11 @@ namespace WebAppl.Internet_banking.Controllers
         {
             vm.UserId = user.Id;
             var item = await _beneficiaryServices.GetAllViewModelAsync();
+            var items= await _productServices.GetAllViewModelAsync();
+
+            var SaveAccount = items.Where(pr => pr.Code == vm.BeneficiaryCode).SingleOrDefault();
+
+          
             item = item.Where(x => x.UserId == user.Id).ToList();
 
             ViewBag.BeneficiaryList = item;
@@ -59,6 +65,11 @@ namespace WebAppl.Internet_banking.Controllers
                 return RedirectToAction("Index", new SaveBeneficiaryVM());
             }
 
+            if (SaveAccount.IdAccount == (int)TypesAccountEnum.Prestamo || SaveAccount.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
+            {
+                ModelState.AddModelError("", $"El Numero de Cuenta {vm.BeneficiaryCode} no es una cuenta de ahorro, favor de ingresar una que si lo sea.");
+                return View("Index", vm);
+            }
 
             if (!await _productServices.Exist(vm.BeneficiaryCode))
             {
@@ -74,6 +85,10 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Index", vm);
             }
 
+            if (true)
+            {
+
+            }
 
             SaveBeneficiaryVM beneficiaryVM = await _beneficiaryServices.CreateAsync(vm);
 

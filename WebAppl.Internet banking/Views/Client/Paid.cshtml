@@ -97,22 +97,22 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group m-3">
-                            <select class="form-select fw-bold" name="benefary" asp-items="@(new SelectList(ViewBag.beneficiaries, "Id", "Beneficiary.client.Username"))">
+                            <select name="IdBeneficiary" class="form-select fw-bold" asp-items="@(new SelectList(ViewBag.beneficiaries, "Id", "Beneficiary.client.Username"))">
                                 <option class="fw-bold " value="0">Seleccione el beneficiario</option>
       
                             </select>
                             <span class="text-danger"></span>
                         </div>
                         <div class="form-group m-3 mt-4">
-                            <label for="origin" class="form-label fw-bold text-light"></label>
-                            <select class="form-select fw-bold" asp-items="@(new SelectList(ViewBag.saveAccounts, "Id", "Code"))">
+                            <label for="IdSaveAccount" class="form-label fw-bold text-light"></label>
+                            <select name="IdSaveAccount" id="IdSaveAccount" class="form-select fw-bold" asp-items="@(new SelectList(ViewBag.saveAccounts, "Id", "Code"))">
                                 <option class="fw-bold " value="0">Seleccione su cuenta de origen</option>
                             </select>
                             <span class="text-danger"></span>
                         </div>
                         <div class="form-group m-3">
-                            <label for="origin" class="form-label fw-bold ">Monto:</label>
-                            <input id="origin" class="form-control input-group input-group-sm" type="text" />
+                            <label for="Amount" class="form-label fw-bold ">Monto:</label>
+                            <input id="Amount" name="Amount"  class="form-control input-group input-group-sm" type="number" step="any"/>
                         </div>
                         <div class="form-group m-3  text-center pt-2">
                             <button type="submit" class="btn btn-success fw-bolder text-light border border-white">Validar cuenta</button>

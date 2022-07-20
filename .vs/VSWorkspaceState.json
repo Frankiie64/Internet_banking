@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\Internet_banking.Core.Application",
+<<<<<<< HEAD
     "\\Internet_banking.Core.Application\\Services",
     "\\WebAppl.Internet banking",
     "\\WebAppl.Internet banking\\middlewares",
@@ -12,5 +13,18 @@
     "\\WebAppl.Internet banking\\wwwroot\\css"
   ],
   "SelectedNode": "\\Internet_banking.Core.Application\\Services\\ProductServices.cs",
+=======
+    "\\Internet_banking.Core.Application\\ViewModels",
+    "\\Internet_banking.Core.Application\\ViewModels\\Clients",
+    "\\Internet_banking.Core.Application\\ViewModels\\Clients\\Beneficiary",
+    "\\Internet_banking.Core.Application\\ViewModels\\Clients\\Paids",
+    "\\Internet_banking.Core.Application\\ViewModels\\Products",
+    "\\Internet_banking.Core.Application\\ViewModels\\Users",
+    "\\WebAppl.Internet banking",
+    "\\WebAppl.Internet banking\\wwwroot",
+    "\\WebAppl.Internet banking\\wwwroot\\css"
+  ],
+  "SelectedNode": "\\WebAppl.Internet banking\\Views\\Client\\Paid.cshtml",
+>>>>>>> Conflicts
   "PreviewInSolutionExplorer": false
 }
