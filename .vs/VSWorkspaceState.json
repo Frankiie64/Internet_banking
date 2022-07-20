@@ -2,16 +2,29 @@
   "ExpandedNodes": [
     "",
     "\\Internet_banking.Core.Application",
-    "\\Internet_banking.Core.Application\\ViewModels",
-    "\\Internet_banking.Core.Application\\ViewModels\\Money Advance",
-    "\\Internet_banking.Infrastructure.Identity",
-    "\\Internet_banking.Infrastructure.Identity\\Seeds",
+<<<<<<< HEAD
+    "\\Internet_banking.Core.Application\\Services",
     "\\WebAppl.Internet banking",
-    "\\WebAppl.Internet banking\\Controllers",
+    "\\WebAppl.Internet banking\\middlewares",
     "\\WebAppl.Internet banking\\Views",
+    "\\WebAppl.Internet banking\\Views\\Admin",
     "\\WebAppl.Internet banking\\Views\\Client",
-    "\\WebAppl.Internet banking\\Views\\Shared"
+    "\\WebAppl.Internet banking\\wwwroot",
+    "\\WebAppl.Internet banking\\wwwroot\\css"
   ],
-  "SelectedNode": "\\WebAppl.Internet banking\\Controllers\\ClientController.cs",
+  "SelectedNode": "\\Internet_banking.Core.Application\\Services\\ProductServices.cs",
+=======
+    "\\Internet_banking.Core.Application\\ViewModels",
+    "\\Internet_banking.Core.Application\\ViewModels\\Clients",
+    "\\Internet_banking.Core.Application\\ViewModels\\Clients\\Beneficiary",
+    "\\Internet_banking.Core.Application\\ViewModels\\Clients\\Paids",
+    "\\Internet_banking.Core.Application\\ViewModels\\Products",
+    "\\Internet_banking.Core.Application\\ViewModels\\Users",
+    "\\WebAppl.Internet banking",
+    "\\WebAppl.Internet banking\\wwwroot",
+    "\\WebAppl.Internet banking\\wwwroot\\css"
+  ],
+  "SelectedNode": "\\WebAppl.Internet banking\\Views\\Client\\Paid.cshtml",
+>>>>>>> Conflicts
   "PreviewInSolutionExplorer": false
 }
