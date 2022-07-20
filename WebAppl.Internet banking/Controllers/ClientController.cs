@@ -301,9 +301,99 @@ namespace WebAppl.Internet_banking.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> CreditCardPaid()
+        public async Task<IActionResult> CreditCardPaid(CreditCardPaid vm)
         {
-            return View();
+            vm.HasError = false;
+
+            if (!ModelState.IsValid)
+            {
+                vm.HasError = true;
+                vm.Error = "Por favor rellenar todos los campos, de manera que se espera.";
+                return View(vm);
+            }
+
+            var SaveAccount = await ProductService.GetByIdSaveViewModelAsync(vm.IdSaveAccount);
+
+            if ((SaveAccount.Amount - vm.Amount) < 0)
+            {
+                vm.HasError = true;
+                vm.Error = "No posee suficiente balance para realizar esta pago";
+                return View(vm);
+            }
+
+            var CreditCard = await ProductService.GetByIdSaveViewModelAsync(vm.IdCreditCard);
+
+            if (CreditCard.Paid == 0)
+            {
+                vm.HasError = true;
+                vm.Error = $"Su tarjeta de credito esta saldada";
+                return View(vm);
+            }
+
+            if ( CreditCard.Paid - vm.Amount < 0)
+            {
+                vm.HasError = true;
+                vm.Error = $"La cantidad exacta a pagar es de {CreditCard.Paid}, favor intentar de nuevo con este mismo monto.";
+                return View(vm);
+            }
+
+            SaveAccount.Amount -= vm.Amount;
+
+            bool value = await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+            if (!value)
+            {
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno cuando se estaba realizando la transferencia de cuenta a prestammo, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            CreditCard.Paid -= vm.Amount;
+
+            value = await ProductService.UpdateAsync(CreditCard, vm.IdCreditCard);
+
+            if (!value)
+            {
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno, cuando se estaba debitando el prestamo, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            var trasantion = await TrasantationService.GetByDateTrasations();
+
+            if (trasantion == null)
+            {
+                CreditCard.Paid += vm.Amount;
+                await ProductService.UpdateAsync(CreditCard, vm.IdCreditCard);
+
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema interno, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+
+            trasantion.Paids += 1;
+
+            value = await TrasantationService.UpdateAsync(trasantion, trasantion.Id);
+
+            if (!value)
+            {
+                CreditCard.Paid += vm.Amount;
+                await ProductService.UpdateAsync(CreditCard, vm.IdCreditCard);
+
+                SaveAccount.Amount += vm.Amount;
+                await ProductService.UpdateAsync(SaveAccount, vm.IdSaveAccount);
+
+                vm.HasError = true;
+                vm.Error = $"Ha ocurrido un problema, favor de comunicarse con alguno de nuestros administradores.";
+                return View(vm);
+            }
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
         public async Task<IActionResult> DuebPaid(DeubsPaids vm)
         {
