@@ -13,21 +13,21 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group m-3">
-                            <select class="form-select fw-bold" asp-items="@(new SelectList(ViewBag.saveAccounts, "Id", "Code"))">
+                            <select name="IdAccountPaymentMaker" class="form-select fw-bold" asp-items="@(new SelectList(ViewBag.saveAccounts, "Id", "Code"))">
                                 <option class="fw-bold text-light" value="0">Seleccione su cuenta de origen</option>
                             </select>
                             <span class="text-danger"></span>
                         </div>
                         <div class="form-group m-3">
-                            <label for="origin" class="form-label fw-bold text-light">Cuenta destino:</label>
-                            <input id="origin" class="form-control input-group input-group-sm bg-white" type="text" />
+                            <label for="IdAccountToPay" class="form-label fw-bold text-light">Cuenta destino:</label>
+                            <input name="IdAccountToPay" id="IdAccountToPay" class="form-control input-group input-group-sm bg-white" type="text" />
                         </div>
                         <div class="form-group m-3">
-                            <label for="origin" class="form-label fw-bold text-light">Monto:</label>
-                            <input id="origin" class="form-control input-group input-group-sm   bg-white" type="text" />
+                            <label for="Amount" class="form-label fw-bold text-light">Monto:</label>
+                            <input name="Amount" id="Amount" class="form-control input-group input-group-sm   bg-white" type="text" />
                         </div>
                         <div class="form-group m-3  text-center pt-2">
-                            <button type="submit" class="btn btn-outline-secondary text-white fw-bolder text-light border border-white">Verificar datos</button>
+                            <button type="submit" class="btn btn-outline-secondary text-white fw-bolder text-light border border-white">Realizar Pago Expreso</button>
                         </div>
                     </div>
                 </div>
