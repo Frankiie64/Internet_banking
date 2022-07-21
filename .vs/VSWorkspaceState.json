@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\Internet_banking.Core.Application",
+    "\\Internet_banking.Core.Application\\Services",
     "\\Internet_banking.Core.Application\\ViewModels",
     "\\Internet_banking.Core.Application\\ViewModels\\Clients",
     "\\Internet_banking.Core.Application\\ViewModels\\Clients\\Paids",
