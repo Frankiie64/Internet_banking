@@ -34,6 +34,7 @@
       "WebAppl.Internet banking/1.0.0": {
         "dependencies": {
           "Internet_banking.Core.Application": "1.0.0",
+          "Internet_banking.Core.Domain": "1.0.0",
           "Internet_banking.Infrastructure.Identity": "1.0.0",
           "Internet_banking.Infrastructure.Persistence": "1.0.0",
           "Internet_banking.Infrastructure.Shared": "1.0.0",
