@@ -130,3 +130,25 @@ C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\ref\Internet_banking.Infrastructure.Identity.dll
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.pdb
 C:\Users\Franklyn\source\repos\InternetBaking_Versions\Charlie\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.genruntimeconfig.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Infrastructure.Identity.deps.json
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Infrastructure.Identity.runtimeconfig.json
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Infrastructure.Identity.runtimeconfig.dev.json
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Infrastructure.Identity.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Infrastructure.Identity.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Core.Application.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Core.Domain.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Infrastructure.Shared.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Core.Application.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Infrastructure.Shared.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\bin\Debug\net5.0\Internet_banking.Core.Domain.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.csproj.AssemblyReference.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.AssemblyInfoInputs.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.AssemblyInfo.cs
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.csproj.CoreCompileInputs.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.csproj.CopyComplete
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\refint\Internet_banking.Infrastructure.Identity.dll
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.pdb
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\Internet_banking.Infrastructure.Identity.genruntimeconfig.cache
+C:\Users\Eleikel\Desktop\ITLA\Programacion III\Internet Banking Push\Internet_banking\Internet_banking.Infrastructure.Identity\obj\Debug\net5.0\ref\Internet_banking.Infrastructure.Identity.dll
