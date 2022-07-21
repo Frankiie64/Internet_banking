@@ -65,15 +65,15 @@ namespace WebAppl.Internet_banking.Controllers
                 return RedirectToAction("Index", new SaveBeneficiaryVM());
             }
 
-            if (SaveAccount.IdAccount == (int)TypesAccountEnum.Prestamo || SaveAccount.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
-            {
-                ModelState.AddModelError("", $"El Numero de Cuenta {vm.BeneficiaryCode} no es una cuenta de ahorro, favor de ingresar una que si lo sea.");
-                return View("Index", vm);
-            }
-
             if (!await _productServices.Exist(vm.BeneficiaryCode))
             {
                 ModelState.AddModelError("", $"El Numero de Cuenta {vm.BeneficiaryCode} no existe.");
+                return View("Index", vm);
+            }
+
+            if (SaveAccount.IdAccount == (int)TypesAccountEnum.Prestamo || SaveAccount.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
+            {
+                ModelState.AddModelError("", $"El Numero de Cuenta {vm.BeneficiaryCode} no es una cuenta de ahorro, favor de ingresar una que si lo sea.");
                 return View("Index", vm);
             }
 
