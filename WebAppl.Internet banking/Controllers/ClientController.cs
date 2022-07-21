@@ -178,9 +178,16 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Transferencia", vm);
             }
 
-
-
+            
             var SaveAccount = await ProductService.GetByIdSaveViewModelAsync(vm.IdSaveAccount);
+
+            if (SaveAccount.Code == vm.CodeSaveAccount)
+            {
+                vm.HasError = true;
+                vm.Error = "No se puede realizar una transacion a una misma cuenta.";
+                return View("Transferencia", vm);
+            }
+
 
             if ((SaveAccount.Amount - vm.Amount) < 0)
             {
@@ -310,13 +317,25 @@ namespace WebAppl.Internet_banking.Controllers
                 return View(vm);
             }
 
+            var list = await ProductService.GetAllWithIncludeAsync();
+
+          
+
             //Money Receiver
             vm.Receiver = await ProductService.GetProductByCode(vm.IdAccountToPay);
 
+          
             if (vm.Receiver == null)
             {
                 vm.HasError = true;
-                vm.Error = "Esta cuenta no existe.";
+                vm.Error = "Esta cuenta no esta disponible para haccer transaciones.";
+                return View(vm);
+            }
+
+            if (vm.Receiver.IdClient == user.Id)
+            {
+                vm.HasError = true;
+                vm.Error = "Para hacer una tranferencia entre cuenta utilice nuestro servicio de transferencia";
                 return View(vm);
             }
 
