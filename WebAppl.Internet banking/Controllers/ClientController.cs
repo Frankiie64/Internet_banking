@@ -106,41 +106,6 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("SaveMoney", vm);
             }
 
-
-            var trasantion = await TrasantationService.GetByDateTrasations();
-
-            if (trasantion == null)
-            {
-
-                CreditCard.Paid -= (vm.Amount * 0.0625) + vm.Amount;
-                await ProductService.UpdateAsync(CreditCard, vm.IdcreditCard);
-
-                SaveAccount.Amount -= vm.Amount;
-                await ProductService.UpdateAsync(SaveAccount, SaveAccount.Id);
-
-                vm.HasError = true;
-                vm.Error = "Ha ocurrido un error interno, por favor llamar al servicio tecnico .";
-                return View("SaveMoney", vm);
-            }
-
-            trasantion.Count_transactional += 1;
-
-            value = await TrasantationService.UpdateAsync(trasantion, trasantion.Id);
-
-            if (!value)
-            {
-
-                CreditCard.Paid -= (vm.Amount * 0.0625) + vm.Amount;
-                await ProductService.UpdateAsync(CreditCard, vm.IdcreditCard);
-
-                SaveAccount.Amount -= vm.Amount;
-                await ProductService.UpdateAsync(SaveAccount, SaveAccount.Id);
-
-                vm.HasError = true;
-                vm.Error = "Ha ocurrido un error interno, por favor llamar al servicio tecnico .";
-                return View("SaveMoney", vm);
-            }
-
             vm = new();
             vm.IdcreditCard = 0;
             vm.CodeSaveAccount = 0;
@@ -186,6 +151,13 @@ namespace WebAppl.Internet_banking.Controllers
                 vm.HasError = true;
                 vm.Error = "No se puede realizar una transacion a una misma cuenta.";
                 return View("Transferencia", vm);
+            }
+
+            if (SaveAccount.IdClient != user.Id)
+            {
+                vm.HasError = true;
+                vm.Error = "Para hacer un pago entre cuenta utilice nuestro servicio de pagos.";
+                return View(vm);
             }
 
 

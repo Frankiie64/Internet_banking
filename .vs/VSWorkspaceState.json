@@ -2,7 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\Internet_banking.Core.Application",
-    "\\Internet_banking.Core.Application\\Services",
     "\\Internet_banking.Core.Application\\ViewModels",
     "\\Internet_banking.Core.Application\\ViewModels\\Clients",
     "\\Internet_banking.Core.Application\\ViewModels\\Clients\\Paids",
@@ -13,6 +12,6 @@
     "\\WebAppl.Internet banking\\wwwroot",
     "\\WebAppl.Internet banking\\wwwroot\\css"
   ],
-  "SelectedNode": "\\WebAppl.Internet banking\\Controllers\\ClientController.cs",
+  "SelectedNode": "\\WebAppl.Internet banking\\Controllers\\BeneficiaryController.cs",
   "PreviewInSolutionExplorer": false
 }
