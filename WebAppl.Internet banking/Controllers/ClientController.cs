@@ -106,41 +106,6 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("SaveMoney", vm);
             }
 
-
-            var trasantion = await TrasantationService.GetByDateTrasations();
-
-            if (trasantion == null)
-            {
-
-                CreditCard.Paid -= (vm.Amount * 0.0625) + vm.Amount;
-                await ProductService.UpdateAsync(CreditCard, vm.IdcreditCard);
-
-                SaveAccount.Amount -= vm.Amount;
-                await ProductService.UpdateAsync(SaveAccount, SaveAccount.Id);
-
-                vm.HasError = true;
-                vm.Error = "Ha ocurrido un error interno, por favor llamar al servicio tecnico .";
-                return View("SaveMoney", vm);
-            }
-
-            trasantion.Count_transactional += 1;
-
-            value = await TrasantationService.UpdateAsync(trasantion, trasantion.Id);
-
-            if (!value)
-            {
-
-                CreditCard.Paid -= (vm.Amount * 0.0625) + vm.Amount;
-                await ProductService.UpdateAsync(CreditCard, vm.IdcreditCard);
-
-                SaveAccount.Amount -= vm.Amount;
-                await ProductService.UpdateAsync(SaveAccount, SaveAccount.Id);
-
-                vm.HasError = true;
-                vm.Error = "Ha ocurrido un error interno, por favor llamar al servicio tecnico .";
-                return View("SaveMoney", vm);
-            }
-
             vm = new();
             vm.IdcreditCard = 0;
             vm.CodeSaveAccount = 0;
@@ -188,6 +153,21 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Transferencia", vm);
             }
 
+            if (SaveAccount.IdAccount == (int)TypesAccountEnum.Prestamo
+                || SaveAccount.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
+            {
+                vm.HasError = true;
+                vm.Error = "Solo puedes hacer transferencia entre cuentas de ahorros.";
+                return View("Transferencia", vm);
+            }
+
+                if (SaveAccount.IdClient != user.Id)
+            {
+                vm.HasError = true;
+                vm.Error = "Para hacer un pago entre cuenta utilice nuestro servicio de pagos.";
+                return View(vm);
+            }
+
 
             if ((SaveAccount.Amount - vm.Amount) < 0)
             {
@@ -211,7 +191,7 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Transferencia", vm);
             }
 
-            if (SaveAccount.IdAccount != (int)TypesAccountEnum.Cuentadeahorro && SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
+            if (Destination.IdAccount == (int)TypesAccountEnum.Prestamo || Destination.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
             {
                 vm.HasError = true;
                 vm.Error = "Solo esta permito cuentas de ahorros.";
@@ -317,13 +297,10 @@ namespace WebAppl.Internet_banking.Controllers
                 return View(vm);
             }
 
-            var list = await ProductService.GetAllWithIncludeAsync();
-
-          
+            var list = await ProductService.GetAllWithIncludeAsync();          
 
             //Money Receiver
             vm.Receiver = await ProductService.GetProductByCode(vm.IdAccountToPay);
-
           
             if (vm.Receiver == null)
             {
@@ -331,6 +308,14 @@ namespace WebAppl.Internet_banking.Controllers
                 vm.Error = "Esta cuenta no esta disponible para haccer transaciones.";
                 return View(vm);
             }
+
+            if (vm.SaveAccount.IdAccount  != (int)TypesAccountEnum.Cuentadeahorro && vm.SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
+            {
+                vm.HasError = true;
+                vm.Error = "Solo esta disponible entre cuentas de ahorros.";
+                return View(vm);
+            }
+
 
             if (vm.Receiver.IdClient == user.Id)
             {
