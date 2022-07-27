@@ -153,7 +153,15 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Transferencia", vm);
             }
 
-            if (SaveAccount.IdClient != user.Id)
+            if (SaveAccount.IdAccount == (int)TypesAccountEnum.Prestamo
+                || SaveAccount.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
+            {
+                vm.HasError = true;
+                vm.Error = "Solo puedes hacer transferencia entre cuentas de ahorros.";
+                return View("Transferencia", vm);
+            }
+
+                if (SaveAccount.IdClient != user.Id)
             {
                 vm.HasError = true;
                 vm.Error = "Para hacer un pago entre cuenta utilice nuestro servicio de pagos.";
@@ -183,7 +191,7 @@ namespace WebAppl.Internet_banking.Controllers
                 return View("Transferencia", vm);
             }
 
-            if (SaveAccount.IdAccount != (int)TypesAccountEnum.Cuentadeahorro && SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
+            if (Destination.IdAccount == (int)TypesAccountEnum.Prestamo || Destination.IdAccount == (int)TypesAccountEnum.Tarjetadecredito)
             {
                 vm.HasError = true;
                 vm.Error = "Solo esta permito cuentas de ahorros.";
@@ -289,13 +297,10 @@ namespace WebAppl.Internet_banking.Controllers
                 return View(vm);
             }
 
-            var list = await ProductService.GetAllWithIncludeAsync();
-
-          
+            var list = await ProductService.GetAllWithIncludeAsync();          
 
             //Money Receiver
             vm.Receiver = await ProductService.GetProductByCode(vm.IdAccountToPay);
-
           
             if (vm.Receiver == null)
             {
@@ -303,6 +308,14 @@ namespace WebAppl.Internet_banking.Controllers
                 vm.Error = "Esta cuenta no esta disponible para haccer transaciones.";
                 return View(vm);
             }
+
+            if (vm.SaveAccount.IdAccount  != (int)TypesAccountEnum.Cuentadeahorro && vm.SaveAccount.IdAccount != (int)TypesAccountEnum.CuentaPrincipal)
+            {
+                vm.HasError = true;
+                vm.Error = "Solo esta disponible entre cuentas de ahorros.";
+                return View(vm);
+            }
+
 
             if (vm.Receiver.IdClient == user.Id)
             {

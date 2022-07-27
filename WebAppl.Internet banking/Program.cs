@@ -33,9 +33,7 @@ namespace WebAppl.Internet_banking
                     var productRepository = services.GetRequiredService<ITypeAccountRepository>();
                     var TrasationalRepository = services.GetRequiredService<ITransactionRepository>();
 
-
                     await DefaultRoles.SeedAsync(userManager, roleManager);
-                    await DefaultBasicUser.SeedAsync(userManager, roleManager);
                     await DefaultAdminUser.SeedAsync(userManager,roleManager);
                     await DefaultSuperAdminUser.SeedAsync(userManager, roleManager);
 

@@ -38,7 +38,6 @@ namespace Internet_banking.Infrastructure.Persistence
 
             //Generics
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
             //Other repos
             services.AddTransient<ITypeAccountRepository, TypeAccountRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();

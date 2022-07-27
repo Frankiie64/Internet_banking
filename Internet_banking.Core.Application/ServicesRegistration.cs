@@ -21,6 +21,7 @@ namespace Internet_banking.Core.Application
             #endregion
             #region Services 
 
+            services.AddTransient(typeof(IGenericServices<,,>), typeof(GenericServices<,,>));
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ITypeAccountService, TypeAccountService>();
             services.AddTransient<IProductServices, ProductServices>();
